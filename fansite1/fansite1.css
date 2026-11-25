@@ -1,53 +1,119 @@
-body{
-margin:0;
-padding: 0;
-background-color: #101010;
-color : #F5F5F5;
-font-family: Arial, sans-serif;;
+/*Mise en forme du corps de la page*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    color: #F5F5F5;
+    font-family: Arial, sans-serif;
+    ;
 }
 
 
+/*EN-TETE*/
 
-header .logoRock{
-    height: auto;
-    width: 200px;
-}
-
-header{
+/*Mise en forme de l'en-tête*/
+header {
     display: flex;
     align-items: center;
+    /*Aligner horizontalement le logo avec les liens de navigation*/
     justify-content: space-between;
+    /*Espacer le logo et les liens de navigation*/
     background-color: #151515;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    padding : 10px;
+    margin-bottom: 20px;
+    padding: 10px;
     border-bottom: #E04B40 2px solid;
     width: 100%;
+    /*Pour que l'en-tête prenne toute la largeur de la page*/
     box-sizing: border-box;
 }
 
 
-header nav{
+header nav {
     display: flex;
     gap: 32px;
-    right: 20px;
+    /*Espace entre les liens de navigation*/
     margin-right: 25px;
+    /*Permet d'espacer les liens de navigation avec la droite*/
 }
 
 
-
-header nav a{
+/*Mise en forme des liens de navigation*/
+header nav a {
     text-decoration: none;
     color: #DDDDDD;
+    transition: color 0.3 ease;
 }
 
-header nav a:hover{
+/*Effet quand on survole les liens de navigation*/
+header nav a:hover {
     color: #E04B40;
     font-size: 20px;
 }
 
-aside .logoU2{
+/*Mise en forme du logo RockLegends*/
+header .logoRock {
+    height: auto;
+    width: 200px;
+}
+
+/*MENU LATERAL*/
+
+aside {
+    color: #191919;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #BCBCBC;
+
+}
+
+/*Mise en forme du logo U2*/
+aside .logoU2 {
     width: 80px;
-    height:auto;
+    height: auto;
+}
+
+aside div{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+}
+
+aside{
+    gap: 30px;
+    width: 200px;
+
+
+
+}
+
+.depuis {
+    letter-spacing: 2px;
+}
+
+
+aside nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: #BCBCBC;
+}
+
+aside nav a:hover {
+    color: #E04B40;
+    background-color: #302020;
+    padding: 7px;
+    border-left: #E04B40 solid 3px;
+    box-sizing: border-box;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
 }

@@ -1,3 +1,8 @@
+/*Défilement fluide quand on clique sur un bouton qui nous amène vers une section sur la même page*/
+html {
+    scroll-behavior: smooth;
+}
+
 /*Mise en forme du corps de la page*/
 body {
     margin: 0;
@@ -132,4 +137,28 @@ main{
 .conteneur{
 display: flex;
 align-items:flex-start; /*Permet que le menu latéral et la photo du groupe commencent en haut*/
+}
+
+
+main article div{
+    right: 30px;
+    top : 50%;
+    position:absolute; /*Permet de positionner un élement à un endroit précis sans tenir compte des autres élements : permet ici de positionner le texte sur l'image*/
+
+}
+
+article .logoU2{
+    height: 100px;
+    width: auto;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+
+}
+
+article div div{
+    display: flex;
+    gap: 10px;
 }

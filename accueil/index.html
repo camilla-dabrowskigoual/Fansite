@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-
-
-
-<head>
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +17,7 @@
 <body>
     <header>
         <nav class="nav">
-            <a href="accueil.html">Accueil</a>
+            <a href="index.html">Accueil</a>
             <a href="artistes.html">Artistes</a>
             <a href="about-us.html">About us</a>
             <a href="contact.html">Contact</a>
@@ -30,16 +25,21 @@
     </header>
     <main>
         <!-- 1ère section : La bannière d'accueil (Hero) -->
-        <section class="hero">
-            <button id="btn-prev" class="fleche gauche">❮</button>
-            <p class="surtitre">THE SOUND OF LEGENDS</p>
-            <h1>La musique n'a pas de frontières</h1>
-            <p>Découvrez les artistes qui ont marqué l'histoire du rock</p>
-            <a href="#section-artistes" class="btn-principal">Nos artistes</a>
+   <section class="hero">
+    <div class="banniere">
+        <img src="images/muse.jpg" alt="Muse">
+        <img src="images/coldplay.jpeg" alt="Coldplay">
+        <img src="images/images(1).jpeg" alt="Photo 3">
+        <img src="images/images2.jpeg" alt="Photo 4">
+    </div>
 
-            <button id="btn-next" class="fleche droite">❯</button>
-
-        </section>
+    <button id="btn-prev" class="fleche gauche">❮</button>
+    <p class="surtitre">THE SOUND OF LEGENDS</p>
+    <h1>La musique n'a pas de frontières</h1>
+    <p>Découvrez les artistes qui ont marqué l'histoire du rock</p>
+    <a href="#section-artistes" class="btn-principal">Nos artistes</a>
+    <button id="btn-next" class="fleche droite">❯</button>
+</section>
 
         <!-- 2ème section : La liste des artistes -->
         <section id="section-artistes" class="artistes">
@@ -53,14 +53,15 @@
                 </article>
 
                 <article class="carte-artiste">
-                    <h3>ABBA</h3>
-                    <p>Les légendes suédoises de la pop et du disco</p>
-                    <a href="abba.html">Découvrir le groupe →</a>
+                    <h3>MUSE</h3>
+                    <p>Les géants britanniques du rock alternatif</p>
+                    <a href="muse.html">Découvrir le groupe →</a>
                 </article>
                 <article class="carte-artiste">
                     <h3>Queen</h3>
                     <p>Le groupe britannique emblématique du rock</p>
                     <a href="queen.html">Découvrir le groupe →</a>
+                </article>
             </div>
         </section>
     </main>

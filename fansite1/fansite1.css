@@ -1,0 +1,53 @@
+body{
+margin:0;
+padding: 0;
+background-color: #101010;
+color : #F5F5F5;
+font-family: Arial, sans-serif;;
+}
+
+
+
+header .logoRock{
+    height: auto;
+    width: 200px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151515;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding : 10px;
+    border-bottom: #E04B40 2px solid;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+header nav{
+    display: flex;
+    gap: 32px;
+    right: 20px;
+    margin-right: 25px;
+}
+
+
+
+header nav a{
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+header nav a:hover{
+    color: #E04B40;
+    font-size: 20px;
+}
+
+aside .logoU2{
+    width: 80px;
+    height:auto;
+}

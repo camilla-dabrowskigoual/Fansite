@@ -25,9 +25,8 @@ header {
     margin-bottom: 0px;
     padding: 10px;
     border-bottom: #E04B40 2px solid;
-    width: 100%;
-    /*Pour que l'en-tête prenne toute la largeur de la page*/
-    box-sizing: border-box;
+    width: 100%; /*Pour que l'en-tête prenne toute la largeur de la page*/
+    box-sizing: border-box;/*Largeur de l'en-tête prend en compte le margin et le padding*/
 }
 
 
@@ -44,13 +43,13 @@ header nav {
 header nav a {
     text-decoration: none;
     color: #DDDDDD;
-    transition: color 0.3 ease;
+    transition: color 0.3s ease;
 }
 
 /*Effet quand on survole les liens de navigation*/
 header nav a:hover {
     color: #E04B40;
-    font-size: 20px;
+    transform: scale(1.2);
 }
 
 /*Mise en forme du logo RockLegends*/
@@ -67,8 +66,9 @@ aside {
     display: flex;
     flex-direction: column;
     color: #BCBCBC;
-    flex-shrink: 0; /*Emppeche le menu latéral de rétrecir*/
     padding-top: 20px;
+    gap: 30px;
+    width: 250px;
 
 }
 
@@ -85,10 +85,6 @@ aside div{
     justify-content: center;
 }
 
-aside{
-    gap: 30px;
-    width: 250px;
-}
 
 aside div p{
     font-size: 18px;
@@ -125,16 +121,15 @@ main #band{
     height: 500px;
     width: 100%;
     object-fit: cover; /*Evite que l'image se deforme*/
-    display: block;
-    position: center 20%;
+    display: block;/*Considère l'image comme un bloc et non pas comme un texte et supprime donc le petit espace sous l'image*/
+    object-position: center top;/*Permet de centrer les visages sur la photo*/
 }
 
 main{
-    flex: 1;
-    min-width: 0;
+    flex: 1;/*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
 }
 
 .conteneur{
 display: flex;
-align-items: flex-start;
+align-items:flex-start; /*Permet que le menu latéral et la photo du groupe commencent en haut*/
 }

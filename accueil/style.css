@@ -76,6 +76,7 @@ body {
 }
 
 .hero h1 {
+   
     font-size: 3rem;
     max-width: 800px;
     margin-bottom: 20px;
@@ -83,6 +84,7 @@ body {
 }
 
 .hero p {
+     font-family: "Pacifico", cursive;
     font-size: 1.2rem;
     color: #cccccc;
     max-width: 600px;

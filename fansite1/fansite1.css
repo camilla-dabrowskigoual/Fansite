@@ -22,7 +22,7 @@ header {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding: 10px;
     border-bottom: #E04B40 2px solid;
     width: 100%;
@@ -67,6 +67,8 @@ aside {
     display: flex;
     flex-direction: column;
     color: #BCBCBC;
+    flex-shrink: 0; /*Emppeche le menu latéral de rétrecir*/
+    padding-top: 20px;
 
 }
 
@@ -85,14 +87,16 @@ aside div{
 
 aside{
     gap: 30px;
-    width: 200px;
-
-
-
+    width: 250px;
 }
 
+aside div p{
+    font-size: 18px;
+}
+
+/*On espace les lettres du mot "Depuis"*/
 .depuis {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 
@@ -115,5 +119,22 @@ aside nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
 
+main #band{
+    height: 500px;
+    width: 100%;
+    object-fit: cover; /*Evite que l'image se deforme*/
+    display: block;
+    position: center 20%;
+}
+
+main{
+    flex: 1;
+    min-width: 0;
+}
+
+.conteneur{
+display: flex;
+align-items: flex-start;
 }

@@ -30,8 +30,10 @@ header {
     margin-bottom: 0px;
     padding: 10px;
     border-bottom: #A51F2D 2px solid;
-    width: 100%; /*Pour que l'en-tête prenne toute la largeur de la page*/
-    box-sizing: border-box;/*Largeur de l'en-tête prend en compte le margin et le padding*/
+    width: 100%;
+    /*Pour que l'en-tête prenne toute la largeur de la page*/
+    box-sizing: border-box;
+    /*Largeur de l'en-tête prend en compte le margin et le padding*/
 }
 
 
@@ -66,7 +68,7 @@ header .logoRock {
 /*MENU LATERAL*/
 
 aside {
-    color: #30251F;
+    color: #F2E6D0;
     padding-left: 10px;
     display: flex;
     flex-direction: column;
@@ -74,6 +76,7 @@ aside {
     padding-top: 20px;
     gap: 30px;
     width: 250px;
+    background-color: #30251F;
 
 }
 
@@ -83,7 +86,7 @@ aside .logoU2 {
     height: auto;
 }
 
-aside div{
+aside div {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -91,7 +94,7 @@ aside div{
 }
 
 
-aside div p{
+aside div p {
     font-size: 18px;
 }
 
@@ -105,7 +108,7 @@ aside nav a {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-    color: #352019;
+    color: #F2E6D0;
 }
 
 aside nav a:hover {
@@ -122,47 +125,65 @@ aside nav {
     gap: 25px;
 }
 
-main #band{
+main #band {
     height: 500px;
     width: 100%;
-    object-fit: cover; /*Evite que l'image se deforme*/
-    display: block;/*Considère l'image comme un bloc et non pas comme un texte et supprime donc le petit espace sous l'image*/
-    object-position: center top;/*Permet de centrer les visages sur la photo*/
+    object-fit: cover;
+    /*Evite que l'image se deforme*/
+    display: block;
+    /*Considère l'image comme un bloc et non pas comme un texte et supprime donc le petit espace sous l'image*/
+    object-position: center top;
+    /*Permet de centrer les visages sur la photo*/
 }
 
-main{
-    flex: 1;/*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
+main {
+    flex: 1;
+    /*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
 }
 
-.conteneur{
-display: flex;
-align-items:flex-start; /*Permet que le menu latéral et la photo du groupe commencent en haut*/
+.conteneur {
+    display: flex;
+    align-items: flex-start;
+    /*Permet que le menu latéral et la photo du groupe commencent en haut*/
 }
 
 
-main article div{
+main article div {
     right: 30px;
-    top : 50%;
-    position:absolute; /*Permet de positionner un élement à un endroit précis sans tenir compte des autres élements : permet ici de positionner le texte sur l'image*/
-
+    position: absolute;
+    /*Permet de positionner un élement à un endroit précis sans tenir compte des autres élements : permet ici de positionner le texte sur l'image*/
+    display: flex;
+    gap: 0px;
+    color: #F2E6D0;
+    flex-direction: column;
+    background-color: rgba(36, 28, 23, 0.5);
+    box-shadow: 0 0 40px 30px rgba(36, 28, 23, 0.5);
+    top: 200px;
+    align-items: center;
+    justify-content: center;
 }
 
-article .logoU2{
-    height: 100px;
+article .logoU2 {
+    height: 150px;
     width: auto;
 }
 
-article{
-    display: flex;
-    flex-direction: column;
+article div a{
+    background-color: #A51F2D;
+    color: #F2E6D0;
+    border-radius: 5%;
+    text-decoration: none;
+    padding: 10px;
+    border-color: #F2E6D0;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
 
 }
 
-article div div{
-    display: flex;
-    gap: 10px;
-}
 
-#band{
-    filter: sepia(35%) /*effet specia sur la photo du groupe*/
+
+#band {
+    filter: sepia(35%)
+        /*effet specia sur la photo du groupe*/
 }

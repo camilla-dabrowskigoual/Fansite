@@ -1,14 +1,16 @@
 /*Défilement fluide quand on clique sur un bouton qui nous amène vers une section sur la même page*/
 html {
     scroll-behavior: smooth;
+
 }
 
 /*Mise en forme du corps de la page*/
 body {
     margin: 0;
     padding: 0;
-    background-color: #E5D2B5;
-    color: #352019;
+    background-image: url(images/texture.png) ;
+    background-repeat: repeat;
+    color: #E5D2B5;
     font-family: Arial, sans-serif;
     ;
 }
@@ -23,13 +25,12 @@ header {
     /*Aligner horizontalement le logo avec les liens de navigation*/
     justify-content: space-between;
     /*Espacer le logo et les liens de navigation*/
-    background-color: #241C17;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0px;
     padding: 10px;
-    border-bottom: #A51F2D 2px solid;
+    border-bottom: #A51F2D 3px solid;
     width: 100%;
     /*Pour que l'en-tête prenne toute la largeur de la page*/
     box-sizing: border-box;
@@ -72,11 +73,9 @@ aside {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    color: #352019;
     padding-top: 20px;
     gap: 30px;
     width: 250px;
-    background-color: #30251F;
 
 }
 
@@ -139,6 +138,7 @@ main #band {
 main {
     flex: 1;
     /*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
+    padding: 10px;
 }
 
 .conteneur {
@@ -148,7 +148,7 @@ main {
 }
 
 
-main article div {
+main article>div:first-of-type {
     right: 30px;
     position: absolute;
     /*Permet de positionner un élement à un endroit précis sans tenir compte des autres élements : permet ici de positionner le texte sur l'image*/
@@ -161,6 +161,23 @@ main article div {
     top: 200px;
     align-items: center;
     justify-content: center;
+    font-size: 18px;
+    border-bottom: #E5D2B5 4px solid;
+}
+
+main article>div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/texture\ claire.png);
+    background-color: #E5D2B5;
+    padding-bottom: 40px;
+}
+
+main article>div:last-of-type p{
+color : #352019;
+font-size: 18px;
 }
 
 article .logoU2 {
@@ -169,21 +186,47 @@ article .logoU2 {
 }
 
 article div a{
-    background-color: #A51F2D;
+    background-color: #781C23;
     color: #F2E6D0;
-    border-radius: 5%;
+    border-radius: 10px;
     text-decoration: none;
     padding: 10px;
     border-color: #F2E6D0;
     text-transform: uppercase;
     text-align: center;
     justify-content: center;
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 13px;
+    box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4);
 
 }
 
-
+.slogan {
+    letter-spacing: 5px;
+}
 
 #band {
     filter: sepia(35%)
-        /*effet specia sur la photo du groupe*/
+        /*Effet specia sur la photo du groupe*/
+}
+
+h1{
+    text-align: center;
+    color: #352019;
+    font-family: Georgia, serif;
+    font-size: 40px;
+
+    
+}
+
+hr{
+    content:"";
+    background-color:#781C23;
+    display: block;
+    width: 80px;
+    height: 3px;
+    border: none;
+
+
 }

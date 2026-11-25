@@ -7,8 +7,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #101010;
-    color: #F5F5F5;
+    background-color: #E5D2B5;
+    color: #352019;
     font-family: Arial, sans-serif;
     ;
 }
@@ -23,13 +23,13 @@ header {
     /*Aligner horizontalement le logo avec les liens de navigation*/
     justify-content: space-between;
     /*Espacer le logo et les liens de navigation*/
-    background-color: #151515;
+    background-color: #241C17;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0px;
     padding: 10px;
-    border-bottom: #E04B40 2px solid;
+    border-bottom: #A51F2D 2px solid;
     width: 100%; /*Pour que l'en-tête prenne toute la largeur de la page*/
     box-sizing: border-box;/*Largeur de l'en-tête prend en compte le margin et le padding*/
 }
@@ -47,13 +47,13 @@ header nav {
 /*Mise en forme des liens de navigation*/
 header nav a {
     text-decoration: none;
-    color: #DDDDDD;
+    color: #F2E6D0;
     transition: color 0.3s ease;
 }
 
 /*Effet quand on survole les liens de navigation*/
 header nav a:hover {
-    color: #E04B40;
+    color: #A51F2D;
     transform: scale(1.2);
 }
 
@@ -66,11 +66,11 @@ header .logoRock {
 /*MENU LATERAL*/
 
 aside {
-    color: #191919;
+    color: #30251F;
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    color: #BCBCBC;
+    color: #352019;
     padding-top: 20px;
     gap: 30px;
     width: 250px;
@@ -105,14 +105,14 @@ aside nav a {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-    color: #BCBCBC;
+    color: #352019;
 }
 
 aside nav a:hover {
-    color: #E04B40;
-    background-color: #302020;
+    color: #F2E6D0;
+    background-color: #781C23;
     padding: 7px;
-    border-left: #E04B40 solid 3px;
+    border-left: #A51F2D solid 3px;
     box-sizing: border-box;
 }
 
@@ -161,4 +161,8 @@ article{
 article div div{
     display: flex;
     gap: 10px;
+}
+
+#band{
+    filter: sepia(35%) /*effet specia sur la photo du groupe*/
 }

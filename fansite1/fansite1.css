@@ -1,3 +1,9 @@
+/********************************************
+                ACCUEIL U2
+********************************************/
+
+
+
 /*Défilement fluide quand on clique sur un bouton qui nous amène vers une section sur la même page*/
 html {
     scroll-behavior: smooth;
@@ -301,9 +307,11 @@ footer {
 
 
 
+/********************************************
+            RESPONSIVE TABLETTE
+********************************************/
 
-
-/*RESPONSIVE TABLETTE*/
+/*Accueil U2*/
 
 @media screen and (max-width: 1024px) {
 
@@ -355,7 +363,11 @@ footer {
 
 
 
-/*RESPONSIVE TELEPHONE*/
+/********************************************
+            RESPONSIVE TELEPHONE
+********************************************/
+
+/*Accueil U2*/
 
 @media screen and (max-width: 768px) {
 

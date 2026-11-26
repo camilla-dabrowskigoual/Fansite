@@ -108,6 +108,7 @@ aside nav a {
     text-transform: uppercase;
     transition: 0.3s;
     color: #F2E6D0;
+    transition: transform 3s ease;
 }
 
 aside nav a:hover {
@@ -116,6 +117,7 @@ aside nav a:hover {
     padding: 7px;
     border-left: #A51F2D solid 3px;
     box-sizing: border-box;
+    transform: translateX(10px);
 }
 
 aside nav {
@@ -237,9 +239,14 @@ h1{
     text-align: center;
     color: #352019;
     font-family: Georgia, serif;
-    font-size: 40px;
+    font-size: 40px; 
+}
 
-    
+h1:hover .quatre{
+    color: #A51F2D;
+
+
+
 }
 
 hr{
@@ -249,6 +256,11 @@ hr{
     width: 80px;
     height: 3px;
     border: none;
+    transition: width 0.8s ease;
+}
+
+main article>div:last-of-type:hover hr{
+    width:220px;
 }
 
 .point{

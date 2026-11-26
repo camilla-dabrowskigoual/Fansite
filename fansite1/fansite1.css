@@ -1,7 +1,6 @@
 /*Défilement fluide quand on clique sur un bouton qui nous amène vers une section sur la même page*/
 html {
     scroll-behavior: smooth;
-
 }
 
 /*Mise en forme du corps de la page*/
@@ -12,7 +11,6 @@ body {
     background-repeat: repeat;
     color: #E5D2B5;
     font-family: Arial, sans-serif;
-    ;
 }
 
 

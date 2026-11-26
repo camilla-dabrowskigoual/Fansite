@@ -104,7 +104,7 @@ aside div p {
     letter-spacing: 4px;
 }
 
-/*Mise en page des élements du menu latéral*/
+/*Mise en page des éléments du menu latéral*/
 aside nav {
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@ aside nav a:hover {
     background-color: #781C23;
     padding: 7px;
     border-left: #A51F2D solid 3px;
-    box-sizing: border-box; /*Conserve la taille des élements incluant le border et le padding*/
+    box-sizing: border-box; /*Conserve la taille des éléments incluant le border et le padding*/
     transform: translateX(10px);
     /*Les liens se déplacent vers la droite*/
 }
@@ -154,7 +154,7 @@ main #band {
 /*Effet quand on survole l'image du groupe*/
 main #band:hover {
     transform: scale(1.15); /*Taille de l'image augmente de 15%*/
-    filter: sepia(0%); /*Retire l'effet specia de l'image*/
+    filter: sepia(0%); /*Retire l'effet sepia de l'image*/
 }
 
 /*Mise en forme de l'image du groupe*/
@@ -182,7 +182,7 @@ main {
 main article>div:first-of-type {
     right: 30px;
     position: absolute;
-    /*Permet de positionner un élement à un endroit précis sans tenir compte des autres élements : permet ici de positionner le texte sur l'image*/
+    /*Permet de positionner un élement à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte sur l'image*/
     display: flex;
     gap: 20px;
     color: #F2E6D0;

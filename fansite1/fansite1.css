@@ -134,11 +134,12 @@ main #band {
     object-position: center top;
     /*Permet de centrer les visages sur la photo*/
     filter: sepia(35%); /*Effet specia sur la photo du groupe*/
-    transition: tranform 0.3s ease;
+    transition: transform 3s ease, filter 0.5s ease;
 }
 
 main #band:hover{
     transform: scale(1.15);
+    filter: sepia(0%);
 }
 
 main figure{
@@ -216,7 +217,15 @@ article div a{
     width: 50%;
     margin-bottom: 13px;
     box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4);
+    transition: transform 0.4 ease;
+    
 
+}
+
+article div a:hover{
+    background-color: #A51F2D;
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(165, 31, 45, 0.6);
 }
 
 .slogan {

@@ -133,8 +133,10 @@ aside nav a:hover {
 }
 
 
+
 /*CONTENU PRINCIPAL*/
 
+/*Mise en forme de l'image de groupe*/
 main #band {
     height: 500px;
     width: 100%;
@@ -161,6 +163,7 @@ main figure {
     margin: 0; /*Suuprime les marges engendrés par la balise figure*/
 }
 
+/*Mise en page du contenu principal*/
 main {
     flex: 1;
     /*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
@@ -168,13 +171,14 @@ main {
     padding-right: 0px;
 }
 
+/*Disposition du contenu principal et du menu latéral côte à côté*/
 .conteneur {
     display: flex;
     align-items: flex-start;
     /*Permet que le menu latéral et la photo du groupe commencent en haut*/
 }
 
-
+/*Mise en forme du bloc qui contient le logo U2 et les textes superosés à la photo du groupe*/
 main article>div:first-of-type {
     right: 30px;
     position: absolute;
@@ -192,7 +196,7 @@ main article>div:first-of-type {
     border-bottom: #E5D2B5 4px solid;
 }
 
-
+/*Mise en forme du bloc de bienvenue sous la photo du groupe*/
 main article>div:last-of-type {
     display: flex;
     flex-direction: column;
@@ -281,6 +285,7 @@ main article>div:last-of-type:hover hr {
 }
 
 
+
 /*PIED DE PAGE*/
 
 footer {
@@ -293,4 +298,157 @@ footer {
     color: #F2E6D0;
     padding-top: 8px;
     padding-bottom: 8px;
+}
+
+
+/*RESPONSIVE TABLETTE*/
+
+@media screen and (max-width: 1024px) {
+
+    header .logoRock {
+        width: 160px;
+    }
+
+    header nav {
+        gap: 20px;
+        margin-right: 10px;
+    }
+
+    aside {
+        width: 180px;
+    }
+
+    aside nav a {
+        font-size: 14px;
+    }
+
+    main {
+        min-width: 0;
+    }
+
+    main #band {
+        height: 400px;
+    }
+
+    main article>div:first-of-type {
+        right: 20px;
+        top: 200px;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    article .logoU2 {
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    article div a {
+        font-size: 16px;
+        width: 70%;
+    }
+}
+
+
+
+/*RESPONSIVE TELEPHONE*/
+
+@media screen and (max-width: 768px) {
+
+    /*Adaptation de l'en-tête*/
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+        gap: 15px;
+    }
+
+    /*Disposition verticale du menu et du contenu principal*/
+    .conteneur {
+        flex-direction: column;
+    }
+
+    /*Adaptation du menu latéral*/
+    aside {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        align-items: center;
+        gap: 15px;
+    }
+
+    aside div {
+        align-items: center;
+    }
+
+    aside .logoU2 {
+        width: 90px;
+    }
+
+    aside nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /*Adaptation du contenu principal*/
+    main {
+        width: 100%;
+    }
+
+    main #band {
+        height: 300px;
+    }
+
+    /*Positionnement du logo et des textes sous la photo*/
+    main article>div:first-of-type {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        gap: 10px;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    article .logoU2 {
+        height: 80px;
+    }
+
+    .slogan {
+        letter-spacing: 3px;
+    }
+
+    /*Adaptation du bloc de bienvenue*/
+    main article>div:last-of-type {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    main article>div:last-of-type p {
+        font-size: 16px;
+    }
+
+    article div a {
+        width: 85%;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    /*Adaptation du pied de page*/
+    footer {
+        font-size: 12px;
+        text-align: center;
+    }
 }

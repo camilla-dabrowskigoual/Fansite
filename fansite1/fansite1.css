@@ -7,7 +7,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-image: url(images/texture.png) ;
+    background-image: url(images/texture.png);
     background-repeat: repeat;
     color: #E5D2B5;
     font-family: Arial, sans-serif;
@@ -35,7 +35,7 @@ header {
     /*Largeur de l'en-tête prend en compte le margin et le padding*/
 }
 
-
+/*Mise en forme du menu de navigation principal*/
 header nav {
     display: flex;
     gap: 32px;
@@ -43,7 +43,6 @@ header nav {
     margin-right: 25px;
     /*Permet d'espacer les liens de navigation avec la droite*/
 }
-
 
 /*Mise en forme des liens de navigation*/
 header nav a {
@@ -64,6 +63,8 @@ header .logoRock {
     width: 200px;
 }
 
+
+
 /*MENU LATERAL*/
 
 aside {
@@ -71,10 +72,11 @@ aside {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
+    /*Elements en colonne*/
     padding-top: 20px;
     gap: 30px;
     width: 250px;
-
+    /*Largeur du menu latéral*/
 }
 
 /*Mise en forme du logo U2*/
@@ -83,14 +85,16 @@ aside .logoU2 {
     height: auto;
 }
 
+/*Mise en page du logo U2 + phrase "Depuis 1976"*/
 aside div {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    /* Mise en colonne des 2 élèments*/
     justify-content: center;
+    /*Alignement vertical des 2 élèments*/
 }
 
-
+/* Mise en forme de la phrase "Depuis 1976*/
 aside div p {
     font-size: 18px;
 }
@@ -100,29 +104,36 @@ aside div p {
     letter-spacing: 4px;
 }
 
-
-aside nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s;
-    color: #F2E6D0;
-    transition: transform 3s ease;
-}
-
-aside nav a:hover {
-    color: #F2E6D0;
-    background-color: #781C23;
-    padding: 7px;
-    border-left: #A51F2D solid 3px;
-    box-sizing: border-box;
-    transform: translateX(10px);
-}
-
+/*Mise en page des élements du menu latéral*/
 aside nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
+
+/*Mise en forme des liens du menu latéral*/
+aside nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    /*Permet de mettre le texte en majuscule*/
+    color: #F2E6D0;
+    transition: transform 3s ease;
+    /*Indique que le "transform" se fait en 3s*/
+}
+
+/*Effet quand on survole les liens*/
+aside nav a:hover {
+    color: #F2E6D0;
+    background-color: #781C23;
+    padding: 7px;
+    border-left: #A51F2D solid 3px;
+    box-sizing: border-box; /*Conserve la taille des élements incluant le border et le padding*/
+    transform: translateX(10px);
+    /*Les liens se déplacent vers la droite*/
+}
+
+
+/*CONTENU PRINCIPAL*/
 
 main #band {
     height: 500px;
@@ -133,18 +144,21 @@ main #band {
     /*Considère l'image comme un bloc et non pas comme un texte et supprime donc le petit espace sous l'image*/
     object-position: center top;
     /*Permet de centrer les visages sur la photo*/
-    filter: sepia(35%); /*Effet specia sur la photo du groupe*/
-    transition: transform 3s ease, filter 0.5s ease;
+    filter: sepia(35%);
+    /*Effet specia sur la photo du groupe*/
+    transition: transform 3s ease, filter 0.5s ease; /*L'effet du transform se fait en 3s et la suppression du filtre en 0.5s*/
 }
 
-main #band:hover{
-    transform: scale(1.15);
-    filter: sepia(0%);
+/*Effet quand on survole l'image du groupe*/
+main #band:hover {
+    transform: scale(1.15); /*Taille de l'image augmente de 15%*/
+    filter: sepia(0%); /*Retire l'effet specia de l'image*/
 }
 
-main figure{
-overflow: hidden;
-margin: 0;
+/*Mise en forme de l'image du groupe*/
+main figure {
+    overflow: hidden; /*Evite que les bords de l'image grandisse, seulement l'intérieur de l'image se modifie lors du survol*/
+    margin: 0; /*Suuprime les marges engendrés par la balise figure*/
 }
 
 main {
@@ -179,9 +193,6 @@ main article>div:first-of-type {
 }
 
 
-
-
-
 main article>div:last-of-type {
     display: flex;
     flex-direction: column;
@@ -192,92 +203,94 @@ main article>div:last-of-type {
     padding-bottom: 40px;
 }
 
-main article>div:last-of-type p{
-color : #352019;
-font-size: 18px;
+/*Mise en forme de la phrase au-dessus du bouton "Découvrez le groupe"*/
+main article>div:last-of-type p {
+    color: #352019;
+    font-size: 18px;
 }
 
+/*Mise en forme du logo U2 dans main*/
 article .logoU2 {
     height: 130px;
     width: auto;
-    
 }
 
-article div a{
+/*Mise en forme du lien "Découvrez le groupe" sous forme de bouton*/
+article div a {
     background-color: #781C23;
     color: #F2E6D0;
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
     border-color: #F2E6D0;
-    text-transform: uppercase;
-    text-align: center;
-    justify-content: center;
+    text-transform: uppercase; /*Phrase en majuscule*/
+    text-align: center; /*Alignement horizontal du texte*/
+    justify-content: center; /*Aligneùent vertical du texte*/
     font-size: 20px;
     width: 50%;
     margin-bottom: 13px;
-    box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4);
+    box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4); /*Ajout d'une ombre autour du bouton*/
     transition: transform 0.4 ease;
-    
-
 }
 
-article div a:hover{
+/*Effet quand on survole le bouton*/
+article div a:hover {
     background-color: #A51F2D;
-    transform: translateY(-4px);
-    box-shadow: 0 0 20px rgba(165, 31, 45, 0.6);
+    transform: translateY(-4px); /*Déplacement du bouton vers le haut*/
 }
 
+/*Espace entre les lettres du slogan "Beyond the music*/
 .slogan {
     letter-spacing: 5px;
 }
 
-
-h1{
-    text-align: center;
+/*Mise en forme du titre principal h1*/
+h1 {
+    text-align: center; /*Centre le texte horizontalement*/
     color: #352019;
     font-family: Georgia, serif;
-    font-size: 40px; 
+    font-size: 40px;
 }
 
-h1:hover .quatre{
+/*Changement de couleur des mots "Quatre musiciens lors du survol du titre h1*/
+h1:hover .quatre {
     color: #A51F2D;
-
-
-
 }
 
-hr{
-    content:"";
-    background-color:#781C23;
-    display: block;
+/*Création de la barre rouge sous h1*/
+hr {
+    content: "";
+    background-color: #781C23;
+    display: block; /*Permet sa visualisation*/
     width: 80px;
     height: 3px;
-    border: none;
-    transition: width 0.8s ease;
+    border: none; /*retire les bordures de la barre rouge*/
+    transition: width 0.8s ease; /*La barre rouhe s'élargit en 0.8s*/
 }
 
-main article>div:last-of-type:hover hr{
-    width:220px;
+/*Effet sur la barre rouge quand on survole h1*/
+main article>div:last-of-type:hover hr {
+    width: 220px; /*Elargissement au survole*/
 }
 
-.point{
-    color:#A51F2D;
+/*Mise en forme des points entre les mots Dublin, Irlande et 1976*/
+.point {
+    color: #A51F2D;
     margin-right: 5px;
     margin-left: 5px;
 }
 
-footer{
-    background-color:  transparent;
+
+/*PIED DE PAGE*/
+
+footer {
     border-top: #A51F2D 2px solid;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    color:#F2E6D0;
+    color: #F2E6D0;
     padding-top: 8px;
     padding-bottom: 8px;
-
-
 }

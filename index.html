@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Legends — Fansite V2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <header class="header">
+        <nav class="nav">
+            <a href="#top" class="logo">ROCK<span>LEGENDS</span></a>
+
+            <button class="burger" id="btn-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <div class="menu-item">
+                    <a href="index.html">Accueil</a>
+                </div>
+
+                <div class="menu-item">
+                    <a href="artistes.html">Artistes ▾</a>
+                    <div class="sous-menu">
+                        <a href="u2.html">U2 (Irlande)</a>
+                        <a href="../Fansite/fansiteabba/index.html">A<span class="b-inverse">B</span>BA (Suède)</a>
+                    </div>
+                </div>
+
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1ère section : Bannière Carrousel Moderne -->
+        <section class="hero" id="hero">
+            <div class="banniere">
+                <img src="images/u2.jpg" alt="U2" data-legende="U2 — Live in Concert">
+                <img src="images/carrousel.jpg" alt="ABBA" data-legende="ABBA — Voyage">
+            </div>
+
+            <button id="btn-prev" class="fleche gauche" aria-label="Photo précédente">❮</button>
+
+            <div class="hero-contenu">
+                <p class="surtitre">THE SOUND OF LEGENDS</p>
+                <h1>La musique n'a pas de frontières</h1>
+                <p class="sous-titre-script">Découvrez les artistes qui ont marqué l'histoire de la musique</p>
+                <a href="#section-artistes" class="btn-principal">Explorer les artistes</a>
+            </div>
+
+            <button id="btn-next" class="fleche droite" aria-label="Photo suivante">❯</button>
+
+            <!-- Barre inférieure du carrousel : légende dynamique + points de navigation -->
+            <div class="hero-footer">
+                <span id="legende-slide" class="legende-slide">U2 — Live in Concert</span>
+                <div class="dots" id="carousel-dots"></div>
+            </div>
+        </section>
+
+        <!-- 2ème section : Artistes avec Recherche, Filtres et Modale -->
+        <section id="section-artistes" class="artistes">
+            <h2>Nos artistes</h2>
+
+            <!-- Outils de filtrage et recherche -->
+            <div class="barre-outils">
+                <input type="search" id="recherche-artiste" placeholder="Rechercher un groupe (ex: U2, ABBA...)" aria-label="Rechercher un artiste">
+
+                <div class="filtres" id="filtres-artistes">
+                    <button class="btn-filtre actif" data-filtre="tous">Tous</button>
+                    <button class="btn-filtre" data-filtre="irlande">Irlande</button>
+                    <button class="btn-filtre" data-filtre="suede">Suède</button>
+                </div>
+            </div>
+
+            <div class="grille-artistes" id="grille-artistes">
+                <article class="carte-artiste" data-categorie="irlande" data-nom="u2">
+                    <div class="carte-header">
+                        <span class="badge">Irlande • 1976</span>
+                    </div>
+                    <h3>U2</h3>
+                    <p>Le rock irlandais intemporel porté par des hymnes de stade légendaires.</p>
+                    <div class="carte-actions">
+                        <a href="u2.html" class="lien-page">Page complète →</a>
+                        <button class="btn-apercu"
+                            data-titre="U2"
+                            data-infos="Formation : 1976 à Dublin • Albums cultes : The Joshua Tree, Achtung Baby • Titres phares : With or Without You, Sunday Bloody Sunday."
+                            data-lien="u2.html">Aperçu rapide</button>
+                    </div>
+                </article>
+
+                <article class="carte-artiste" data-categorie="suede" data-nom="abba">
+                    <div class="carte-header">
+                        <span class="badge">Suède • 1972</span>
+                    </div>
+                    <h3>A<span class="b-inverse">B</span>BA</h3>
+                    <p>Les géants légendaires de la pop suédoise aux tubes planétaires intemporels.</p>
+                    <div class="carte-actions">
+                        <a href="../Fansite/fansiteabba/index.html" class="lien-page">Page complète →</a>
+                        <button class="btn-apercu"
+                            data-titre="ABBA"
+                            data-infos="Formation : 1972 à Stockholm • Albums cultes : Arrival, Voulez-Vous, Super Trouper • Titres phares : Dancing Queen, Mamma Mia, The Winner Takes It All."
+                            data-lien="abba.html">Aperçu rapide</button>
+                    </div>
+                </article>
+            </div>
+
+            <p id="message-vide" class="message-vide" hidden>Aucun artiste ne correspond à ta recherche.</p>
+        </section>
+    </main>
+
+    <!-- Modale d'aperçu rapide -->
+    <div class="modale" id="modale-artiste" aria-hidden="true">
+        <div class="modale-contenu">
+            <button class="modale-fermer" id="btn-fermer-modale" aria-label="Fermer">✕</button>
+            <h3 id="modale-titre">Titre du groupe</h3>
+            <p id="modale-texte">Informations...</p>
+            <a href="#" id="modale-lien" class="btn-principal">Découvrir la fiche complète</a>
+        </div>
+    </div>
+
+    <!-- Bouton retour en haut -->
+    <a href="#top" id="btn-top" class="btn-top" aria-label="Retour en haut">↑</a>
+
+    <footer>
+        <p>© 2026 Rock Legends — Fansite non officiel - La Plateforme</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

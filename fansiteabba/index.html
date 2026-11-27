@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>ABBA — Univers & Discographie</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">A<span class="b-inverse">B</span>BA</a>
+            </div>
+            <div class="menu-principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a href="pages/actualites.html">Actualités</a></li>
+                    <li><a href="pages/realisations.html">Réalisations</a></li>
+                    <li><a href="pages/evenements.html">Événements</a></li>
+                    <li><a href="pages/galerie.html">Galerie</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header-socials">
+                <a href="https://www.instagram.com/abba/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">IG</a>
+                <a href="https://www.youtube.com/channel/UCY2e-tJGJdhAOvX62-5zU8A" target="_blank"
+                    rel="noopener noreferrer" aria-label="YouTube">YT</a>
+                <a href="https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV" target="_blank"
+                    rel="noopener noreferrer" aria-label="Spotify">SP</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO AVEC CARROUSEL 3D COVERFLOW -->
+        <section class="hero-section">
+            <div class="coverflow-container">
+                <button class="cf-btn cf-prev" aria-label="Image précédente">&#10094;</button>
+
+                <div class="coverflow-stage" id="coverflow-stage">
+                    <div class="cf-card">
+                        <img src="assets/images/hero.jpeg" alt="ABBA Eurovision 1974">
+                    </div>
+                    <div class="cf-card">
+                        <img src="assets/images/carrousel.jpg" alt="Album Arrival 1976">
+                    </div>
+                    <div class="cf-card">
+                        <img src="assets/images/concert.jpg" alt="ABBA en concert">
+                    </div>
+                    <div class="cf-card">
+                        <img src="assets/images/stockholm.jpeg" alt="Studios Polar Stockholm">
+                    </div>
+                </div>
+
+                <button class="cf-btn cf-next" aria-label="Image suivante">&#10095;</button>
+            </div>
+
+            <div class="hero-overlay-text">
+                <h1>Une musique intemporelle<br>pour toutes les générations</h1>
+                <a href="pages/realisations.html" class="btn-grey">Explorer la discographie</a>
+            </div>
+        </section>
+
+        <!-- SECTION ANTHRACITE : COUPS DE CŒUR -->
+        <section class="section-charcoal">
+            <div class="container">
+                <h2 class="section-title-center">Coups de cœur des fans</h2>
+                <div class="grid-3">
+                    <article class="editorial-card">
+                        <a href="pages/realisations.html">
+                            <img src="assets/images/arrival.jpg" alt="Album Arrival">
+                            <h3>Arrival (1976)</h3>
+                            <p>Dancing Queen &bull; Knowing Me, Knowing You</p>
+                        </a>
+                    </article>
+
+                    <article class="editorial-card">
+                        <a href="pages/realisations.html">
+                            <img src="assets/images/VOULEZVOUS.jpg" alt="Album Voulez-Vous">
+                            <h3>Voulez-Vous (1979)</h3>
+                            <p>Gimme! Gimme! Gimme! &bull; Chiquitita</p>
+                        </a>
+                    </article>
+
+                    <article class="editorial-card">
+                        <a href="pages/realisations.html">
+                            <img src="assets/images/images.jpeg" alt="Album Voyage">
+                            <h3>Voyage (2021)</h3>
+                            <p>I Still Have Faith in You &bull; Don't Shut Me Down</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-footer">ABBA</span>
+                    <p>Fan-site non officiel dédié à l'univers musical d'ABBA.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/abba/" target="_blank"
+                            rel="noopener noreferrer">Instagram</a>
+                        <a href="https://open.spotify.com/artist/0LcJLqbBmaGUft1e9Mm8HV" target="_blank"
+                            rel="noopener noreferrer">Spotify</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="pages/actualites.html">Actualités</a></li>
+                        <li><a href="pages/realisations.html">Réalisations</a></li>
+                        <li><a href="pages/evenements.html">Événements</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="pages/galerie.html">Photos & Vidéos</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="https://www.abbaomnibus.com/" target="_blank" rel="noopener noreferrer">ABBA
+                                Omnibus (Fans)</a></li>
+                        <li><a href="https://www.abbafanclub.nl/" target="_blank"
+                                rel="noopener noreferrer">International Fan Club</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+/* =========================================
+   1. RÉGLAGES DE BASE & VARIABLES
+   ========================================= */
+:root {
+    --bg-main: #111111;
+    --bg-card: #1c1c1c;
+    --accent: #f3857d;
+    --accent-bright: #f8866a;
+    --accent-dark: #743131;
+    --text-main: #f5f5f5;
+    --text-muted: #bbbbbb;
+    --border-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. NAVIGATION STICKY & SOUS-MENUS
+   ========================================= */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(20, 20, 20, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #f5b4b4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links > a:hover,
+.menu-item > a:hover {
+    color: #ffffff;
+}
+
+.menu-item {
+    position: relative;
+    padding-bottom: 16px;
+    margin-bottom: -16px;
+}
+
+/* Sous-menu carré centré sous le lien parent */
+.sous-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #181818;
+    border: 2px solid var(--accent);
+    border-radius: 0px;
+    min-width: 210px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+    z-index: 101;
+}
+
+.menu-item:hover .sous-menu {
+    display: flex;
+}
+
+.sous-menu a {
+    padding: 13px 18px;
+    font-size: 0.95rem;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sous-menu a:last-child {
+    border-bottom: none;
+}
+
+.sous-menu a:hover {
+    background-color: var(--accent);
+    color: #111111;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 1.4rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* =========================================
+   3. BANNIÈRE CARROUSEL (.hero)
+   ========================================= */
+.hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.85));
+    z-index: 1;
+}
+
+.banniere {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.banniere img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.hero-contenu {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.surtitre {
+    color: var(--accent-bright);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--accent);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.sous-titre-script {
+    font-family: "Pacifico", cursive;
+    font-size: 1.25rem;
+    color: #f65555;
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--accent-dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--accent);
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+.fleche {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fcae9c;
+    border: 2px solid #fceeec;
+    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.fleche:hover {
+    background-color: var(--accent);
+    color: #111111;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.gauche { left: 20px; }
+.droite { right: 20px; }
+
+/* Barre inférieure du carrousel (Légende + Points) */
+.hero-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.legende-slide {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #dddddd;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(243, 133, 125, 0.4);
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.dot.actif {
+    background-color: var(--accent);
+    transform: scale(1.25);
+}
+
+/* =========================================
+   4. SECTION ARTISTES, FILTRES & RECHERCHE
+   ========================================= */
+.artistes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.artistes h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #fd7979;
+}
+
+.barre-outils {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+#recherche-artiste {
+    flex: 1;
+    min-width: 240px;
+    padding: 11px 18px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#recherche-artiste:focus {
+    border-color: var(--accent);
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-filtre {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-filtre:hover,
+.btn-filtre.actif {
+    background-color: var(--accent);
+    color: #111111;
+    border-color: var(--accent);
+}
+
+.grille-artistes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+.carte-artiste {
+    background-color: var(--bg-card);
+    padding: 30px 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-artiste:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: var(--accent);
+    border: 1px solid rgba(243, 133, 125, 0.4);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.carte-artiste h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.carte-artiste p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.carte-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.lien-page {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lien-page:hover {
+    text-decoration: underline;
+}
+
+.btn-apercu {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-apercu:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.message-vide {
+    margin-top: 30px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* =========================================
+   5. MODALE & BOUTON RETOUR EN HAUT
+   ========================================= */
+.modale {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modale.ouverte {
+    display: flex;
+}
+
+.modale-contenu {
+    position: relative;
+    background-color: #1e1e1e;
+    border: 2px solid var(--accent);
+    padding: 35px 30px;
+    max-width: 480px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+.modale-fermer {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.modale-fermer:hover {
+    color: var(--accent);
+}
+
+.modale-contenu h3 {
+    font-size:
+}
+.modale-contenu p {
+    color: var(--text-main);
+    margin-bottom: 25px;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 90;
+    width: 44px;
+    height: 44px;
+    background-color: var(--accent);
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.btn-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-top:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   6. FOOTER & RESPONSIVE MOBILE
+   ========================================= */
+footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 25px 5%;
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+        gap: 15px;
+    }
+
+    .nav-links.ouvert {
+        display: flex;
+    }
+
+    .menu-item {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .sous-menu {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        box-shadow: none;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 30px 15px 90px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .sous-titre-script {
+        font-size: 1.05rem;
+    }
+
+    .fleche {
+        top: auto;
+        bottom: 65px;
+        transform: none;
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .fleche:hover {
+        transform: scale(1.08);
+    }
+
+    .gauche { left: 15px; }
+    .droite { right: 15px; }
+}

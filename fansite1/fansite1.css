@@ -421,6 +421,7 @@ margin-top: 0px;
     color: #352019;
 }
 
+/* Création de la barre rouge de la frise chronologique*/
 .article2_biographie .dates{
     margin-left: 40%;
     margin-right: 50px;
@@ -428,10 +429,12 @@ margin-top: 0px;
     padding-left: 50px;
 }
 
+/*On positionne chaque bloc de date comme référence pour placer les points rouges de la frise chronologique*/
 .article2_biographie .dates div{
     position: relative;
 }
 
+/*Création des points rouges de la frise chronologique*/
 .article2_biographie .dates div::before{
     content: "";
     background-color: #781C23;
@@ -441,10 +444,6 @@ margin-top: 0px;
     position: absolute;
     left : -59.5px;
     top:13px;
-
-
-
-
 }
 
 

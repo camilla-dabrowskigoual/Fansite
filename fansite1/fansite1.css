@@ -141,7 +141,8 @@ aside nav a:hover {
     background-color: #781C23;
     padding: 7px;
     border-left: #A51F2D solid 3px;
-    box-sizing: border-box; /*Conserve la taille des éléments incluant le border et le padding*/
+    box-sizing: border-box;
+    /*Conserve la taille des éléments incluant le border et le padding*/
     transform: translateX(10px);
     /*Les liens se déplacent vers la droite*/
 }
@@ -195,19 +196,24 @@ main #band {
     /*Permet de centrer les visages sur la photo*/
     filter: sepia(35%);
     /*Effet sépia sur la photo du groupe*/
-    transition: transform 3s ease, filter 0.5s ease; /*L'effet du transform se fait en 3s et la suppression du filtre en 0.5s*/
+    transition: transform 3s ease, filter 0.5s ease;
+    /*L'effet du transform se fait en 3s et la suppression du filtre en 0.5s*/
 }
 
 /*Effet quand on survole l'image du groupe*/
 main #band:hover {
-    transform: scale(1.15); /*Taille de l'image augmente de 15%*/
-    filter: sepia(0%); /*Retire l'effet sepia de l'image*/
+    transform: scale(1.15);
+    /*Taille de l'image augmente de 15%*/
+    filter: sepia(0%);
+    /*Retire l'effet sepia de l'image*/
 }
 
 /*Mise en forme de l'image du groupe*/
 main #figure_band {
-    overflow: hidden; /*Evite que les bords de l'image grandissent, seulement l'intérieur de l'image se modifie lors du survol*/
-    margin: 0; /*Supprime les marges engendrées par la balise figure*/
+    overflow: hidden;
+    /*Evite que les bords de l'image grandissent, seulement l'intérieur de l'image se modifie lors du survol*/
+    margin: 0;
+    /*Supprime les marges engendrées par la balise figure*/
 }
 
 /*Mise en forme du bloc qui contient le logo U2 et les textes superposés à la photo du groupe*/
@@ -231,12 +237,16 @@ main .article1_home>div:first-of-type {
 /*Mise en forme du bloc de bienvenue sous la photo du groupe*/
 main .article1_home>div:last-of-type {
     display: flex;
-    flex-direction: column; /*Elements en colonne*/
-    align-items: center; /*Elements alignés horizontalement*/
-    justify-content: center; /*Elements alignés verticalement*/
+    flex-direction: column;
+    /*Elements en colonne*/
+    align-items: center;
+    /*Elements alignés horizontalement*/
+    justify-content: center;
+    /*Elements alignés verticalement*/
     background-image: url(images/texture\ claire.png);
     background-color: #E5D2B5;
-    padding-bottom: 40px; /*Ajout d'un padding vers le bas*/
+    padding-bottom: 40px;
+    /*Ajout d'un padding vers le bas*/
 }
 
 /*Mise en forme de la phrase au-dessus du bouton "Découvrez le groupe"*/
@@ -258,19 +268,24 @@ main .article1_home>div:last-of-type p {
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
-    text-transform: uppercase; /*Phrase en majuscule*/
-    text-align: center; /*Alignement horizontal du texte*/
+    text-transform: uppercase;
+    /*Phrase en majuscule*/
+    text-align: center;
+    /*Alignement horizontal du texte*/
     font-size: 20px;
     width: 50%;
     margin-bottom: 13px;
-    box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4); /*Ajout d'une ombre autour du bouton*/
-    transition: transform 0.4s ease; /*Le bouton se déplace en 0.4s vers le haut*/
+    box-shadow: 0px 5px 10px rgba(36, 28, 23, 0.4);
+    /*Ajout d'une ombre autour du bouton*/
+    transition: transform 0.4s ease;
+    /*Le bouton se déplace en 0.4s vers le haut*/
 }
 
 /*Effet quand on survole le bouton*/
 .article1_home div a:hover {
     background-color: #A51F2D;
-    transform: translateY(-4px); /*Déplacement du bouton vers le haut*/
+    transform: translateY(-4px);
+    /*Déplacement du bouton vers le haut*/
 }
 
 /*Espace entre les lettres du slogan "Beyond the music*/
@@ -280,7 +295,8 @@ main .article1_home>div:last-of-type p {
 
 /*Mise en forme du titre principal h1*/
 .article1_home h1 {
-    text-align: center; /*Centre le texte horizontalement*/
+    text-align: center;
+    /*Centre le texte horizontalement*/
     color: #352019;
     font-family: Georgia, serif;
     font-size: 40px;
@@ -296,13 +312,16 @@ main .article1_home>div:last-of-type p {
     background-color: #781C23;
     width: 80px;
     height: 3px;
-    border: none; /*Retire les bordures de la barre rouge*/
-    transition: width 0.8s ease; /*La barre rouge s'élargit en 0.8s*/
+    border: none;
+    /*Retire les bordures de la barre rouge*/
+    transition: width 0.8s ease;
+    /*La barre rouge s'élargit en 0.8s*/
 }
 
 /*Effet sur la barre rouge quand on survole h1*/
 main .article1_home>div:last-of-type:hover hr {
-    width: 220px; /*Elargissement au survol*/
+    width: 220px;
+    /*Elargissement au survol*/
 }
 
 /*Mise en forme des points entre les mots Dublin, Irlande et 1976*/
@@ -324,28 +343,40 @@ main .article1_home>div:last-of-type:hover hr {
 
 /*CONTENU PRINCIPAL*/
 
-.U2_studio{
+.U2_studio {
     width: 100%;
     height: 400px;
     object-fit: cover;
     object-position: center 5%;
     filter: grayscale(100%);
-    display: block; /*Considère l'image comme un bloc et non pas comme un texte et retire l'espace en bas de l'image*/
+    display: block;
+    /*Considère l'image comme un bloc et non pas comme un texte et retire l'espace en bas de l'image*/
+    transition: transform 3s ease;
+}
+
+
+.U2_studio:hover {
+    transform: scale(1.15);
+}
+
+#figure_U2_studio {
+    overflow: hidden;
+    margin: 0;
 }
 
 /*Article 1*/
-.article1_biographie .logoU2{
+.article1_biographie .logoU2 {
     height: auto;
-    width:  300px;
+    width: 300px;
 }
 
-.article1_biographie div{
+.article1_biographie div {
     position: absolute;
-    right : 30px;
-    top : 215px;
+    right: 30px;
+    top: 215px;
 }
 
-.article1_biographie div p{
+.article1_biographie div p {
     background-color: #781C23;
     font-size: 25px;
     text-align: center;
@@ -361,24 +392,32 @@ main .article1_home>div:last-of-type:hover hr {
 
 
 /*Article 2*/
-.article2_biographie h1{
+.article2_biographie h1 {
     font-family: Georgia, serif;
     text-align: center;
     color: #352019;
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 0px;
+    transition: text-shadow 0.5s ease, color 0.5 ease;
 }
 
-.article2_biographie .introducing{
+.article2_biographie h1:hover {
+    text-shadow: 0 0 15px #F5C875;
+    color: #781C23;
+
+
+}
+
+.article2_biographie .introducing {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap : 10px;
+    gap: 10px;
 }
 
-.article2_biographie{
+.article2_biographie {
     background-image: url(images/texture\ claire.png);
     padding: 0px 25px 25px;
 }
@@ -390,78 +429,104 @@ main .article1_home>div:last-of-type:hover hr {
     height: 4px;
 }
 
-.article2_biographie .introducing p{
-margin-left: 200px;
-margin-right: 200px;
-text-align: center;
-color: #352019;
-line-height: 1.5; /*Largeur de l'interligne*/
-font-family: Georgia,  serif;
-margin-top: 0px;
+.article2_biographie .introducing p {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    color: #352019;
+    line-height: 1.5;
+    /*Largeur de l'interligne*/
+    font-family: Georgia, serif;
+    margin-top: 0px;
 
 }
 
-.article2_biographie .dates .years2000 p{
+.article2_biographie .dates .years2000 p {
     margin-bottom: 0px;
 }
 
 
-.article2_biographie .dates h2{
-    background: linear-gradient(to right, #F5C875, transparent) ;
+.article2_biographie .dates h2 {
+    background: linear-gradient(to right, #F5C875, transparent);
     /*Indique que le fond aura une couleur linéeaire de gauche à droite, qui va commencer par du jaune et finir en transparent*/
     font-weight: bolder;
     color: #352019;
-    width: fit-content; /*Adapte la largeur du bloc ici le fond à son contenu ici h2*/
-    padding: 5px 15px; /*padding de 5px en haut en bas et 10px à droite à gauche*/
+    width: fit-content;
+    /*Adapte la largeur du bloc ici le fond à son contenu ici h2*/
+    padding: 5px 15px;
+    /*padding de 5px en haut en bas et 10px à droite à gauche*/
     border-radius: 8px;
     box-shadow: 2px 3px 6px rgba(53, 32, 25, 0.3);
+transition: transform 0.5s ease;
 }
 
-.article2_biographie .dates p{
+
+
+.article2_biographie .dates p {
     color: #352019;
 }
 
 /* Création de la barre rouge de la frise chronologique*/
-.article2_biographie .dates{
-    flex : 1;
+.article2_biographie .dates {
+    flex: 1;
     margin-right: 50px;
     border-left: 3px solid #781C23;
     padding-left: 50px;
 }
 
 /*On positionne chaque bloc de date comme référence pour placer les points rouges de la frise chronologique*/
-.article2_biographie .dates div{
+.article2_biographie .dates div {
     position: relative;
 }
 
 /*Création des points rouges de la frise chronologique*/
-.article2_biographie .dates div::before{
+.article2_biographie .dates div::before {
     content: "";
     background-color: #781C23;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     position: absolute;
-    left : -59.5px;
-    top:13px;
+    left: -59.5px;
+    top: 13px;
+    transition: transform 0.5s ease;
 }
 
-.article2_biographie #U2_1980{
+.article2_biographie .dates div:hover::before {
+    transform: scale(1.5);
+}
+
+.article2_biographie .dates div:hover h2 {
+    transform: scale(1.1);
+
+}
+
+.article2_biographie #U2_1980 {
     width: 400px;
     height: auto;
-    border: solid #F2E6D0 5px; /*solid permet d'avoir un trait plein*/
+    border: solid #F2E6D0 5px;
+    /*solid permet d'avoir un trait plein*/
     transform: rotate(-4deg);
     display: block;
     box-shadow: 2px 3px 6px rgba(53, 32, 25, 0.3);
     margin: 20px;
-    box-sizing: border-box; /*Taille de l'image inclus le border et le padding*/
-    
+    box-sizing: border-box;
+    /*Taille de l'image inclus le border et le padding*/
+    transition: transform 1s ease;
 }
 
-.article2_biographie .frise{
+.article2_biographie #U2_1980:hover {
+    transform: scale(1.1);
+
+
+
+}
+
+.article2_biographie .frise {
     display: flex;
-    align-items: center; /*Centre les dates et l'image de U2 verticalement */
-    gap:40px;
+    align-items: center;
+    /*Centre les dates et l'image de U2 verticalement */
+    gap: 40px;
 }
 
 

@@ -146,6 +146,20 @@ aside nav a:hover {
     /*Les liens se déplacent vers la droite*/
 }
 
+/*Mise en page du contenu principal*/
+main {
+    flex: 1;
+    /*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
+    padding-top: 10px;
+    padding-right: 0px;
+}
+
+/*Disposition du contenu principal et du menu latéral côte à côté*/
+.conteneur {
+    display: flex;
+    align-items: flex-start;
+    /*Permet que le menu latéral et la photo du groupe commencent en haut*/
+}
 
 /*PIED DE PAGE*/
 
@@ -191,28 +205,13 @@ main #band:hover {
 }
 
 /*Mise en forme de l'image du groupe*/
-main figure {
+main #figure_band {
     overflow: hidden; /*Evite que les bords de l'image grandissent, seulement l'intérieur de l'image se modifie lors du survol*/
     margin: 0; /*Supprime les marges engendrées par la balise figure*/
 }
 
-/*Mise en page du contenu principal*/
-main {
-    flex: 1;
-    /*Permet que le contenu principal occupe tout l'espace restant à côté du menu latéral*/
-    padding-top: 10px;
-    padding-right: 0px;
-}
-
-/*Disposition du contenu principal et du menu latéral côte à côté*/
-.conteneur {
-    display: flex;
-    align-items: flex-start;
-    /*Permet que le menu latéral et la photo du groupe commencent en haut*/
-}
-
 /*Mise en forme du bloc qui contient le logo U2 et les textes superposés à la photo du groupe*/
-main article>div:first-of-type {
+main .article1_home>div:first-of-type {
     right: 30px;
     position: absolute;
     /*Permet de positionner un élement à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte sur l'image*/
@@ -230,7 +229,7 @@ main article>div:first-of-type {
 }
 
 /*Mise en forme du bloc de bienvenue sous la photo du groupe*/
-main article>div:last-of-type {
+main .article1_home>div:last-of-type {
     display: flex;
     flex-direction: column; /*Elements en colonne*/
     align-items: center; /*Elements alignés horizontalement*/
@@ -241,19 +240,19 @@ main article>div:last-of-type {
 }
 
 /*Mise en forme de la phrase au-dessus du bouton "Découvrez le groupe"*/
-main article>div:last-of-type p {
+main .article1_home>div:last-of-type p {
     color: #352019;
     font-size: 18px;
 }
 
 /*Mise en forme du logo U2 dans main*/
-article .logoU2 {
+.article1_home .logoU2 {
     height: 130px;
     width: auto;
 }
 
 /*Mise en forme du lien "Découvrez le groupe" sous forme de bouton*/
-article div a {
+.article1_home div a {
     background-color: #781C23;
     color: #F2E6D0;
     border-radius: 10px;
@@ -269,18 +268,18 @@ article div a {
 }
 
 /*Effet quand on survole le bouton*/
-article div a:hover {
+.article1_home div a:hover {
     background-color: #A51F2D;
     transform: translateY(-4px); /*Déplacement du bouton vers le haut*/
 }
 
 /*Espace entre les lettres du slogan "Beyond the music*/
-.slogan {
+.article1_home .slogan {
     letter-spacing: 5px;
 }
 
 /*Mise en forme du titre principal h1*/
-h1 {
+.article1_home h1 {
     text-align: center; /*Centre le texte horizontalement*/
     color: #352019;
     font-family: Georgia, serif;
@@ -288,12 +287,12 @@ h1 {
 }
 
 /*Changement de couleur des mots "Quatre musiciens" lors du survol du titre h1*/
-h1:hover .quatre {
+.article1_home h1:hover .quatre {
     color: #A51F2D;
 }
 
 /*Création de la barre rouge sous h1*/
-hr {
+.article1_home hr {
     background-color: #781C23;
     width: 80px;
     height: 3px;
@@ -302,12 +301,12 @@ hr {
 }
 
 /*Effet sur la barre rouge quand on survole h1*/
-main article>div:last-of-type:hover hr {
+main .article1_home>div:last-of-type:hover hr {
     width: 220px; /*Elargissement au survol*/
 }
 
 /*Mise en forme des points entre les mots Dublin, Irlande et 1976*/
-.point {
+.article1_home .point {
     color: #A51F2D;
     margin-right: 5px;
     margin-left: 5px;
@@ -333,16 +332,31 @@ main article>div:last-of-type:hover hr {
     filter: grayscale(100%);
 }
 
-.introduction .logoU2{
+.article1_biographie .logoU2{
     height: auto;
-    width: 60px;
-    object-fit: cover;
+    width:  300px;
+}
 
+.article1_biographie div{
+    position: absolute;
+    right : 30px;
+    top : 215px;
+}
 
+.article1_biographie div p{
+    background-color: #781C23;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 20px;
+    transform: rotate(-4deg);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: 15px;
+    
 
 
 }
-
 
 
 

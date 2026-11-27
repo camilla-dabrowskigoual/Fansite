@@ -449,9 +449,13 @@ margin-top: 0px;
 .article2_biographie #U2_1980{
     width: 400px;
     height: auto;
-    border: #781C23 2px;
+    border: solid #F2E6D0 5px;
     transform: rotate(-4deg);
     display: block;
+    box-shadow: 2px 3px 6px rgba(53, 32, 25, 0.3);
+    margin: 20px;
+    box-sizing: border-box;
+    
 }
 
 .article2_biographie .frise{

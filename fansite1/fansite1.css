@@ -428,6 +428,25 @@ margin-top: 0px;
     padding-left: 50px;
 }
 
+.article2_biographie .dates div{
+    position: relative;
+}
+
+.article2_biographie .dates div::before{
+    content: "";
+    background-color: #781C23;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    left : -59.5px;
+    top:13px;
+
+
+
+
+}
+
 
 
 

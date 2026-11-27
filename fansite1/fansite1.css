@@ -388,6 +388,22 @@ main .article1_home>div:last-of-type:hover hr {
     margin-top: 15px;
 }
 
+.article1_biographie div p:hover{
+    animation: balancement 0.8s ease infinite;
+}
+
+@keyframes balancement{
+    0% {
+        transform : rotate(-4deg);
+    }
+    50% {
+        transform : rotate(4deg);
+    }
+    100% {
+        transform : rotate(4deg);
+    }
+}
+
 
 
 

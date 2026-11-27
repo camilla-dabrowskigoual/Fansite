@@ -623,6 +623,76 @@ transition: transform 0.5s ease;
 
 
 
+/*Biographie*/
+
+@media screen and (max-width: 1024px) {
+
+    /*Adaptation de la photo principale*/
+    .U2_studio {
+        height: 350px;
+    }
+
+    /*Adaptation du logo U2*/
+    .article1_biographie .logoU2 {
+        width: 200px;
+        height: auto;
+    }
+
+    /*Positionnement du logo et du bandeau sur la photo*/
+    main .article1_biographie > div {
+        right: 20px;
+        top: 180px;
+    }
+
+    /*Adaptation du bandeau Biographie*/
+    .article1_biographie div p {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    /*Adaptation du titre principal*/
+    .article2_biographie h1 {
+        font-size: 30px;
+    }
+
+    /*Réduction des marges du paragraphe de présentation*/
+    .article2_biographie .introducing p {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    /*Adaptation de la frise chronologique*/
+    .article2_biographie .frise {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /*Adaptation de la photo ancienne du groupe*/
+    .article2_biographie #U2_1980 {
+        width: 350px;
+        max-width: 80%;
+    }
+
+    /*Adaptation des dates de la frise chronologique*/
+    .article2_biographie .dates {
+        margin-right: 20px;
+        padding-left: 30px;
+    }
+
+    /*Adaptation des titres des dates*/
+    .article2_biographie .dates h2 {
+        font-size: 20px;
+    }
+
+    /*Repositionnement des points rouges sur la barre*/
+    .article2_biographie .dates div::before {
+        left: -39px;
+        top: 8px;
+    }
+}
+
+
+
 /********************************************
             RESPONSIVE TELEPHONE
 ********************************************/
@@ -724,5 +794,104 @@ transition: transform 0.5s ease;
     footer {
         font-size: 12px;
         text-align: center;
+    }
+}
+
+
+
+/*Biographie*/
+
+@media screen and (max-width: 768px) {
+
+    /*Adaptation de la photo principale*/
+    .U2_studio {
+        height: 250px;
+    }
+
+    /*L'article devient la référence pour positionner le logo*/
+    .article1_biographie {
+        position: relative;
+    }
+
+    /*Adaptation du logo U2*/
+    .article1_biographie .logoU2 {
+        width: 120px;
+        height: auto;
+    }
+
+    /*Positionnement du logo et du bandeau sur la photo*/
+    main .article1_biographie > div:first-of-type {
+        position: absolute;
+        right: 15px;
+        top: 80px;
+        padding: 0;
+    }
+
+    /*Adaptation du bandeau Biographie*/
+    .article1_biographie div p {
+        font-size: 14px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+
+    /*Adaptation du contenu principal de la biographie*/
+    .article2_biographie {
+        padding: 0px 15px 20px;
+    }
+
+    /*Adaptation du titre principal*/
+    .article2_biographie h1 {
+        font-size: 26px;
+    }
+
+    /*Adaptation du paragraphe de présentation*/
+    .article2_biographie .introducing p {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 15px;
+    }
+
+    /*Disposition verticale de la photo et des dates*/
+    .article2_biographie .frise {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /*Adaptation de la photo ancienne du groupe*/
+    .article2_biographie #U2_1980 {
+        width: 280px;
+        max-width: 80%;
+        margin: 15px;
+    }
+
+    /*Adaptation de la frise chronologique*/
+    .article2_biographie .dates {
+        margin-right: 0;
+        padding-left: 20px;
+        align-self: stretch;
+        text-align: left;
+    }
+
+    /*Adaptation des titres des dates*/
+    .article2_biographie .dates h2 {
+        font-size: 18px;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    /*Adaptation des paragraphes*/
+    .article2_biographie .dates p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /*Adaptation de la taille et de la position des points rouges*/
+    .article2_biographie .dates div::before {
+        width: 14px;
+        height: 14px;
+        left: -28.5px;
+        top: 8px;
     }
 }

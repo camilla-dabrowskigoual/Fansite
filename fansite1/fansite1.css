@@ -6,9 +6,9 @@
  ******************************************************************/
 
 
-/*************************************************************************************
-            ELEMENTS COMMUNS MINI SITE U2 : MENU LATERAL ET MENU PRINCIPAL
-*************************************************************************************/
+/***********************************************************************************************
+            ELEMENTS COMMUNS MINI SITE U2 : MENU LATERAL, MENU PRINCIPAL, PIED DE PAGE
+************************************************************************************************/
 
 
 
@@ -147,7 +147,19 @@ aside nav a:hover {
 }
 
 
+/*PIED DE PAGE*/
 
+footer {
+    border-top: #A51F2D 2px solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #F2E6D0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
 
 
 
@@ -303,21 +315,6 @@ main article>div:last-of-type:hover hr {
 
 
 
-/*PIED DE PAGE*/
-
-footer {
-    border-top: #A51F2D 2px solid;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #F2E6D0;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-
 
 /********************************************
                 BIOGRAPHIE
@@ -326,9 +323,25 @@ footer {
 
 
 
+/*CONTENU PRINCIPAL*/
+
+.U2_studio{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center 5%;
+    filter: grayscale(100%);
+}
+
+.introduction .logoU2{
+    height: auto;
+    width: 60px;
+    object-fit: cover;
 
 
 
+
+}
 
 
 

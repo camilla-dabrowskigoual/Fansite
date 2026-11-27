@@ -220,7 +220,7 @@ main #figure_band {
 main .article1_home>div:first-of-type {
     right: 30px;
     position: absolute;
-    /*Permet de positionner un élement à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte sur l'image*/
+    /*Permet de positionner un élement à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte et le logo U2 sur l'image*/
     display: flex;
     gap: 20px;
     color: #F2E6D0;
@@ -343,6 +343,9 @@ main .article1_home>div:last-of-type:hover hr {
 
 /*CONTENU PRINCIPAL*/
 
+/*Article 1*/
+
+/*Mise en forme image groupe U2 haut de page*/
 .U2_studio {
     width: 100%;
     height: 400px;
@@ -354,32 +357,34 @@ main .article1_home>div:last-of-type:hover hr {
     transition: transform 3s ease;
 }
 
-
+/*Aggrandissement de 15% au survol de l'image*/
 .U2_studio:hover {
     transform: scale(1.15);
 }
 
+/*Mise en forme de la balise fugure qui contient l'image du groupe*/
 #figure_U2_studio {
-    overflow: hidden;
-    margin: 0;
+    overflow: hidden; /*/*Evite que les bords de l'image grandissent, seulement l'intérieur de l'image se modifie lors du survol*/
+    margin: 0; /*Suppresion des marges engendrées par la balise figure*/
 }
 
-/*Article 1*/
+/*Mise en forme du logo U2 sur l'image du groupe*/
 .article1_biographie .logoU2 {
     height: auto;
     width: 300px;
 }
 
 .article1_biographie div {
-    position: absolute;
+    position: absolute; /*Permet de positionner un élement à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte et le logo U2 sur l'image*/
     right: 30px;
     top: 215px;
 }
 
+/*Mise en forme du mot "Biographie" sous le logo U2*/
 .article1_biographie div p {
     background-color: #781C23;
     font-size: 25px;
-    text-align: center;
+    text-align: center; /*Permet de centre horizontalement le mot dans son bloc*/
     padding: 10px 20px;
     transform: rotate(-4deg);
     text-transform: uppercase;
@@ -388,26 +393,34 @@ main .article1_home>div:last-of-type:hover hr {
     margin-top: 15px;
 }
 
+/*Animation quand on survole le mot "Biographie"*/
 .article1_biographie div p:hover{
-    animation: balancement 0.8s ease infinite;
+    animation: balancement 0.8s ease infinite; /* balancement indique le nom de l'animation qui se fait en 0.8s et se répète indéfiniment tant qu'on survole le mot "Biographie"*/
 }
 
+/*Utilisation de keyframes pour décrire l'animation*/
 @keyframes balancement{
+    /*Départ à 0% de la durée l'animation : le mot "Biographie" est dans sa position initiale à -4 degrès*/
     0% {
         transform : rotate(-4deg);
     }
+
+    /*A la moitié 50% de la durée l'animation : le mot "Biographie" est à 4 degrès.*/
     50% {
         transform : rotate(4deg);
     }
+
+    /*A la fin 100% de la durée de l'animation : le mot "Biographie est à -4 degrès.*/
     100% {
-        transform : rotate(4deg);
+        transform : rotate(-4deg);
     }
 }
-
 
 
 
 /*Article 2*/
+
+/*Mise en forme du titre principal h1*/
 .article2_biographie h1 {
     font-family: Georgia, serif;
     text-align: center;
@@ -418,26 +431,28 @@ main .article1_home>div:last-of-type:hover hr {
     transition: text-shadow 0.5s ease, color 0.5 ease;
 }
 
+/*Effets quand on survole h1*/
 .article2_biographie h1:hover {
-    text-shadow: 0 0 15px #F5C875;
+    text-shadow: 0 0 15px #F5C875; /*Création d'une ombre*/
     color: #781C23;
-
-
 }
 
+/*Mise en forme du bloc qui contient h1, la barre rouge et le texte de présentation*/
 .article2_biographie .introducing {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /*Aligne horizontalement les éléments*/
+    justify-content: center; /*Aligne verticalement les élements*/
     gap: 10px;
 }
 
+/*Mise en page de du 2ème article*/
 .article2_biographie {
     background-image: url(images/texture\ claire.png);
     padding: 0px 25px 25px;
 }
 
+/*Création de la barre rouge sous le titre h1*/
 .article2_biographie .introducing hr {
     background-color: #781C23;
     border: none;
@@ -445,6 +460,7 @@ main .article1_home>div:last-of-type:hover hr {
     height: 4px;
 }
 
+/*Mise en forme du texte de présentation sous le titre h1*/
 .article2_biographie .introducing p {
     margin-left: 200px;
     margin-right: 200px;
@@ -454,14 +470,14 @@ main .article1_home>div:last-of-type:hover hr {
     /*Largeur de l'interligne*/
     font-family: Georgia, serif;
     margin-top: 0px;
-
 }
 
+/*Suppression de la marge inférieure du dernier paragraphe qui créée un espace avec le pied de page*/
 .article2_biographie .dates .years2000 p {
     margin-bottom: 0px;
 }
 
-
+/*Mise en forme des titres h2 de la biographie*/
 .article2_biographie .dates h2 {
     background: linear-gradient(to right, #F5C875, transparent);
     /*Indique que le fond aura une couleur linéeaire de gauche à droite, qui va commencer par du jaune et finir en transparent*/
@@ -476,17 +492,24 @@ main .article1_home>div:last-of-type:hover hr {
 transition: transform 0.5s ease;
 }
 
-
-
+/*Coloration des textes de la biographie*/
 .article2_biographie .dates p {
     color: #352019;
 }
 
-/* Création de la barre rouge de la frise chronologique*/
-.article2_biographie .dates {
-    flex: 1;
+/*Mise en forme du bloc "frise" comportant l'image du concert de U2 jeune à gauche + la biographie à droite*/
+.article2_biographie .frise {
+    display: flex;
+    align-items: center;
+    /*Centre les dates et l'image de U2 verticalement */
+    gap: 40px;
+}
+
+/*Mise en forme du bloc regroupant les dates*/
+.article2_biographie .frise .dates {
+    flex: 1; /*Le bloc regroupant les dates occupe toute la partie restante dans le bloc "frise" de a place occupée par l'image du concert de U2 jeune*/
     margin-right: 50px;
-    border-left: 3px solid #781C23;
+    border-left: 3px solid #781C23; /*Création de la barre rouge de la frise chronologique*/
     padding-left: 50px;
 }
 
@@ -508,15 +531,17 @@ transition: transform 0.5s ease;
     transition: transform 0.5s ease;
 }
 
+/*Aggrandissement de 50% des cercles sur la barre chronologique quand on survole chaque bloc comportant une date + texte explicatif*/
 .article2_biographie .dates div:hover::before {
     transform: scale(1.5);
 }
 
+/*Aggrandissement de 10% quand on suvole les titres h2 de la biographie*/
 .article2_biographie .dates div:hover h2 {
     transform: scale(1.1);
-
 }
 
+/*Mise en forme de la photo du concert de U2 jeune*/
 .article2_biographie #U2_1980 {
     width: 400px;
     height: auto;
@@ -531,20 +556,10 @@ transition: transform 0.5s ease;
     transition: transform 1s ease;
 }
 
+/*Aggrandissement de 10% quand on survole la photo du concert de U2 jeune*/
 .article2_biographie #U2_1980:hover {
     transform: scale(1.1);
-
-
-
 }
-
-.article2_biographie .frise {
-    display: flex;
-    align-items: center;
-    /*Centre les dates et l'image de U2 verticalement */
-    gap: 40px;
-}
-
 
 
 

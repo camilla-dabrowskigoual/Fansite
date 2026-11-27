@@ -34,7 +34,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    /*Aligner horizontalement le logo avec les liens de navigation*/
+    /*Aligner verticalement le logo avec les liens de navigation*/
     justify-content: space-between;
     /*Espacer le logo et les liens de navigation*/
     margin-top: 0;
@@ -449,18 +449,18 @@ margin-top: 0px;
 .article2_biographie #U2_1980{
     width: 400px;
     height: auto;
-    border: solid #F2E6D0 5px;
+    border: solid #F2E6D0 5px; /*solid permet d'avoir un trait plein*/
     transform: rotate(-4deg);
     display: block;
     box-shadow: 2px 3px 6px rgba(53, 32, 25, 0.3);
     margin: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Taille de l'image inclus le border et le padding*/
     
 }
 
 .article2_biographie .frise{
     display: flex;
-    align-items: center;
+    align-items: center; /*Centre les dates et l'image de U2 verticalement */
     gap:40px;
 }
 

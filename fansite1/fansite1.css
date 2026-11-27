@@ -367,7 +367,7 @@ main .article1_home>div:last-of-type:hover hr {
     color: #352019;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .article2_biographie .introducing{
@@ -375,10 +375,12 @@ main .article1_home>div:last-of-type:hover hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap : 10px;
 }
 
 .article2_biographie{
     background-image: url(images/texture\ claire.png);
+    padding: 0px 25px 25px;
 }
 
 .article2_biographie .introducing hr {
@@ -386,6 +388,21 @@ main .article1_home>div:last-of-type:hover hr {
     border: none;
     width: 80px;
     height: 4px;
+}
+
+.article2_biographie .introducing p{
+margin-left: 200px;
+margin-right: 200px;
+text-align: center;
+color: #352019;
+line-height: 1.5; /*Largeur de l'interligne*/
+font-family: Georgia,  serif;
+margin-top: 0px;
+
+}
+
+.article2_biographie .dates .years2000 p{
+    margin-bottom: 0px;
 }
 
 

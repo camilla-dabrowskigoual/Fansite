@@ -406,6 +406,28 @@ margin-top: 0px;
 }
 
 
+.article2_biographie .dates h2{
+    background: linear-gradient(to right, #F5C875, transparent) ;
+    /*Indique que le fond aura une couleur linéeaire de gauche à droite, qui va commencer par du jaune et finir en transparent*/
+    font-weight: bolder;
+    color: #352019;
+    width: fit-content; /*Adapte la largeur du bloc ici le fond à son contenu ici h2*/
+    padding: 5px 15px; /*padding de 5px en haut en bas et 10px à droite à gauche*/
+    border-radius: 8px;
+    box-shadow: 2px 3px 6px rgba(53, 32, 25, 0.3);
+}
+
+.article2_biographie .dates p{
+    color: #352019;
+}
+
+.article2_biographie .dates{
+    margin-left: 40%;
+    margin-right: 50px;
+    border-left: 3px solid #781C23;
+    padding-left: 50px;
+}
+
 
 
 

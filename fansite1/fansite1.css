@@ -378,6 +378,7 @@ main .article1_home>div:last-of-type:hover hr {
     filter: drop-shadow(0 0 8px #241C17)
 }
 
+/*Mise en forme du bloc contenant le logo U2 et le texte "Biographie"*/
 .article1_biographie div {
     position: absolute;
     /*Permet de positionner un élément à un endroit précis sans tenir compte des autres éléments : permet ici de positionner le texte et le logo U2 sur l'image*/
@@ -590,6 +591,7 @@ main .article1_home>div:last-of-type:hover hr {
     filter: drop-shadow(0 0 8px #241C17);
 }
 
+/*Mise en forme de la photo des membres haut de page*/
 .article1_membres #members {
     width: 100%;
     object-fit: cover;
@@ -598,15 +600,18 @@ main .article1_home>div:last-of-type:hover hr {
     transition: transform 3s ease;
 }
 
+/*Agrandissement de 15% quand on survole la photo des membres haut de page*/ 
 .article1_membres #members:hover{
     transform: scale(1.15);
 }
 
+/*Mise en forme de la balise "figure" qui contient l'image du groupe*/
 .article1_membres figure{
     margin :0;
     overflow: hidden;
 }
 
+/*Mise en forme du bloc contenant le logo U2 et le texte "Les membres"*/
 .article1_membres div {
     position: absolute;
     display: flex;
@@ -615,15 +620,12 @@ main .article1_home>div:last-of-type:hover hr {
     justify-content: center;
     right: 30px;
     top: 215px;
-
-
 }
 
+/*Suppression des marges du titre principal h1*/
 .article1_membres div h1 {
     margin: 0;
 }
-
-
 
 /*Mise en forme du mot "Les membres" sous le logo U2*/
 .article1_membres div h1 {
@@ -639,23 +641,14 @@ main .article1_home>div:last-of-type:hover hr {
     margin-top: 15px;
 }
 
+/*Animation au survol de h1*/
 .article1_membres div h1:hover {
     animation: balancement 0.8s ease infinite;
 }
 
-@keyframes balancement {
-    0% {
-        transform: rotate(-4deg)
-    }
-    50%{
-        transform: rotate(4deg)
-    }
-    100%{
-        transform: rotate(-4deg)
-    }
-}
-
 /*Article 2*/
+
+/*Mise en forme de la grid*/
 .article2_membres .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -664,35 +657,29 @@ main .article1_home>div:last-of-type:hover hr {
     margin-right: 0;
 }
 
+/*Mise en page du 2ème article*/
 .article2_membres {
     background-image: url(images/texture\ claire.png);
     padding: 30px;
 }
 
+/*Mise en forme de la phrase au-dessus de la grid*/
 .article2_membres>p:first-of-type {
     margin-top: 0;
     font-style: italic;
     font-family: Georgia, serif;
     color: #352019;
     font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
+    font-size: 18px;
+    text-align: center;  /*Centre le texte dans son bloc*/
+    justify-content: center; /*Centre la phrase horizontalement*/
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: center; /*Centre la phrase verticalement*/
     margin-bottom: 50px;
 }
 
-.article2_membres>p:first-of-type:hover #name_members {
-color :#A51F2D; 
-text-shadow: 0 0 15px #F5C875;
-}
-
-.article2_membres>p:first-of-type:hover::before, .article2_membres>p:first-of-type:hover::after {
-width : 0px;
-}
-
+/*Création des barres rouges à gauche et à droite de la phrase au-dessus de la grid*/
 .article2_membres>p:first-of-type::before,
 .article2_membres>p:first-of-type::after {
     content: "";
@@ -703,6 +690,18 @@ width : 0px;
     transition : width 1s ease;
 }
 
+/*Effets sur les noms des membres dans la phrase au-dessus de la grid quand on survole la phrase*/
+.article2_membres>p:first-of-type:hover #name_members {
+color :#A51F2D; 
+text-shadow: 0 0 15px #F5C875;
+}
+
+/*Effets sur les barres rouges à gauche et à droite de la phrase au-dessus de la grid quand on survole la phrase*/
+.article2_membres>p:first-of-type:hover::before, .article2_membres>p:first-of-type:hover::after {
+width : 0px;
+}
+
+/*Mise en forme des titres h2*/
 .article2_membres h2 {
     color: #781C23;
     font-family: Georgia, serif;
@@ -712,22 +711,23 @@ width : 0px;
     transition: color 0.5s ease, text-shadow 0.5s ease;
 }
 
+/*Effets quand on survole les h2*/
 .article2_membres h2:hover {
 color : #A51F2D;
 text-shadow: 0 0 20px #F5C875;
-
 }
 
+/*Mise en page du texte de présentation de chaque membre dans les cartes*/
 .article2_membres .introduce {
     font-family: Georgia, serif;
     font-size: 16px;
     color: #352019;
     line-height: 1.4;
     margin-top: 0;
-    text-align:left;
-    
+    text-align:left; 
 }
 
+/*Mise en forme du texte indiquant le rôle de chaque membre directement sous h2*/
 .article2_membres .quality {
     font-family: Georgia, serif;
     font-size: 18px;
@@ -737,6 +737,7 @@ text-shadow: 0 0 20px #F5C875;
     margin-top: 4px;
 }
 
+/*Ajout d'une barre rouge sous le texte indiquant le rôle de chaque membre*/
 .article2_membres .quality::after {
     content: "";
     display: block;
@@ -747,6 +748,7 @@ text-shadow: 0 0 20px #F5C875;
     margin-bottom: 0px;
 }
 
+/*Mise en forme du lien "En savoir plus" sous forme de bouton*/
 .article2_membres .button {
     font-family: Georgia, serif;
     font-size: 16px;
@@ -757,16 +759,22 @@ text-shadow: 0 0 20px #F5C875;
     border-radius: 4px;
     padding: 10px 35px;
     text-align: center;
-    transition: transform 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
-
+/*Effet quand on survole les liens "En savoir plus"*/
 .article2_membres .button:hover{
     transform: translateY(-8px);
     box-shadow: 0 5px 10px rgba(53, 32, 25, 0.6);
     background-color: #A51F2D;
 }
 
+/*Permet de placer les liens "En savoir plus" en bas de chaque carte*/
+.article2_membres .button {
+    margin-top: auto;
+}
+
+/*Mise en forme de chaque carte de la grid*/
 .article2_membres .parent div {
     background-image: linear-gradient(rgba(255, 240, 215, 0.6),
             rgba(255, 240, 215, 0.6)), url(images/texture\ claire.png);
@@ -778,11 +786,7 @@ text-shadow: 0 0 20px #F5C875;
     box-shadow: 5px 8px 15px rgba(53, 32, 25, 0.65);
 }
 
-
-.article2_membres .parent div .button {
-    margin-top: auto;
-}
-
+/*Mise en forme de la photo de chaque membre sur chaque carte*/
 .article2_membres .parent div img {
     width: 100%;
     height: 250px;
@@ -790,13 +794,12 @@ text-shadow: 0 0 20px #F5C875;
     border-radius: 15px;
     transition : scale 1.5s ease;
     box-shadow: 4px 6px 12px rgba(53, 32, 25, 0.6) ;
-    
 }
 
+/*Effets quand on survole la photo de chaque membre sur chaque carte*/
 .article2_membres .parent div img:hover {
     animation: balancement_members 2s ease infinite;
-    scale: 1.08;
-
+    scale: 1.08; /*On met directement "scale" et pas "transform : scale()" car transform est déjà utilisé pour l'animation*/
 }
 
 
@@ -810,19 +813,13 @@ text-shadow: 0 0 20px #F5C875;
 100%{
     transform: rotate(-4deg);
 }
-
 }
 
-
-
+/*Ajout d'un filtre sur la photo de Bono pour qu'elle soit similaire aux photos des autres membres*/
 .article2_membres .parent .Bono img {
     filter: grayscale(100%) brightness(85%) contrast(80%);
-
 }
 
-.article2_membres .parent .TheEdge img {
-    object-position: center 100%;
-}
 
 
 

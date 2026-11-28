@@ -641,6 +641,8 @@ main .article1_home>div:last-of-type:hover hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .article2_membres {
@@ -728,6 +730,7 @@ main .article1_home>div:last-of-type:hover hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow:  5px 8px 15px rgba(53, 32, 25, 0.65);
 }
 
 .article2_membres .parent div .button{

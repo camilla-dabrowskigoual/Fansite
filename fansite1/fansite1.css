@@ -598,6 +598,15 @@ main .article1_home>div:last-of-type:hover hr {
     transition: transform 3s ease;
 }
 
+.article1_membres #members:hover{
+    transform: scale(1.15);
+}
+
+.article1_membres figure{
+    margin :0;
+    overflow: hidden;
+}
+
 .article1_membres div {
     position: absolute;
     display: flex;
@@ -606,19 +615,13 @@ main .article1_home>div:last-of-type:hover hr {
     justify-content: center;
     right: 30px;
     top: 215px;
-    
-    
+
+
 }
 
 .article1_membres div h1 {
     margin: 0;
 }
-
-
-
-
-
-
 
 
 
@@ -634,6 +637,22 @@ main .article1_home>div:last-of-type:hover hr {
     letter-spacing: 3px;
     font-weight: bold;
     margin-top: 15px;
+}
+
+.article1_membres div h1:hover {
+    animation: balancement 0.8s ease infinite;
+}
+
+@keyframes balancement {
+    0% {
+        transform: rotate(-4deg)
+    }
+    50%{
+        transform: rotate(4deg)
+    }
+    100%{
+        transform: rotate(-4deg)
+    }
 }
 
 /*Article 2*/
@@ -665,6 +684,17 @@ main .article1_home>div:last-of-type:hover hr {
     margin-bottom: 50px;
 }
 
+.article2_membres>p:first-of-type:hover #name_members {
+color :#A51F2D; 
+
+
+
+
+}
+
+
+
+
 .article2_membres>p:first-of-type::before,
 .article2_membres>p:first-of-type::after {
     content: "";
@@ -680,6 +710,13 @@ main .article1_home>div:last-of-type:hover hr {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 0;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.article2_membres h2:hover {
+color : #A51F2D;
+text-shadow: 0 0 15px #F5C875;
+
 }
 
 .article2_membres .introduce {
@@ -699,8 +736,8 @@ main .article1_home>div:last-of-type:hover hr {
     margin-top: 4px;
 }
 
-.article2_membres .quality::after{
-    content:"";
+.article2_membres .quality::after {
+    content: "";
     display: block;
     width: 75px;
     background-color: #781C23;
@@ -716,41 +753,74 @@ main .article1_home>div:last-of-type:hover hr {
     color: #F2E6D0;
     text-decoration: none;
     background-color: #781C23;
-    
     border-radius: 4px;
     padding: 10px 35px;
     text-align: center;
+    transition: transform 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+}
+
+
+.article2_membres .button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(53, 32, 25, 0.6);
+    background-color: #A51F2D;
 }
 
 .article2_membres .parent div {
     background-image: linear-gradient(rgba(255, 240, 215, 0.6),
             rgba(255, 240, 215, 0.6)), url(images/texture\ claire.png);
     border-radius: 5px;
-    padding:15px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow:  5px 8px 15px rgba(53, 32, 25, 0.65);
+    box-shadow: 5px 8px 15px rgba(53, 32, 25, 0.65);
 }
 
-.article2_membres .parent div .button{
+
+.article2_membres .parent div .button {
     margin-top: auto;
 }
 
-.article2_membres .parent div img{
+.article2_membres .parent div img {
     width: 100%;
-    height:     250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 15px;
-}
-
-.article2_membres .parent .Bono img{
-    filter: grayscale(100%) brightness(85%) contrast(80%);
+    transition : scale 1.5s ease;
+    box-shadow: 4px 6px 12px rgba(53, 32, 25, 0.6) ;
     
 }
 
-.article2_membres .parent .TheEdge img{
-object-position: center 100%;
+.article2_membres .parent div img:hover {
+    animation: balancement_members 2s ease infinite;
+    scale: 1.08;
+
+}
+
+
+@keyframes balancement_members {
+    0% {
+        transform : rotate(-4deg);
+    }
+50% {
+    transform: rotate(4deg);
+}
+100%{
+    transform: rotate(-4deg);
+}
+
+}
+
+
+
+.article2_membres .parent .Bono img {
+    filter: grayscale(100%) brightness(85%) contrast(80%);
+
+}
+
+.article2_membres .parent .TheEdge img {
+    object-position: center 100%;
 }
 
 

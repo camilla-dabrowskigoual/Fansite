@@ -675,7 +675,7 @@ main .article1_home>div:last-of-type:hover hr {
     font-family: Georgia, serif;
     color: #352019;
     font-weight: bold;
-    font-family: 20px;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     display: flex;
@@ -989,6 +989,91 @@ text-shadow: 0 0 20px #F5C875;
 
 
 
+/*Les membres*/
+@media screen and (max-width: 768px) {
+
+    /*Adaptation de la photo principale*/
+    .article1_membres #members {
+        height: 250px;
+    }
+
+    /*Adaptation du logo U2*/
+    .article1_membres .logoU2 {
+        width: 120px;
+    }
+
+    /*Positionnement du logo et du bandeau sur la photo*/
+    .article1_membres div {
+        right: 15px;
+        top: 80px;
+    }
+
+    /*Adaptation du bandeau Les membres*/
+    .article1_membres div h1 {
+        font-size: 14px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+
+    /*Adaptation du contenu principal*/
+    .article2_membres {
+        padding: 20px 15px;
+    }
+
+    /*Adaptation du paragraphe de présentation*/
+    .article2_membres > p:first-of-type {
+        font-size: 15px;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    /*Réduction de la largeur des barres rouges*/
+    .article2_membres > p:first-of-type::before,
+    .article2_membres > p:first-of-type::after {
+        width: 25px;
+    }
+
+    /*Disposition des cartes sur une seule colonne*/
+    .article2_membres .parent {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    /*Adaptation des cartes*/
+    .article2_membres .parent div {
+        padding: 15px;
+    }
+
+    /*Adaptation des photos des musiciens*/
+    .article2_membres .parent div img {
+        height: 280px;
+    }
+
+    /*Adaptation des titres h2*/
+    .article2_membres h2 {
+        font-size: 20px;
+    }
+
+    /*Adaptation des rôles des musiciens*/
+    .article2_membres .quality {
+        font-size: 16px;
+    }
+
+    /*Adaptation des paragraphes de présentation*/
+    .article2_membres .introduce {
+        font-size: 15px;
+    }
+
+    /*Adaptation des boutons*/
+    .article2_membres .button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+
+
 /********************************************
             RESPONSIVE TELEPHONE
 ********************************************/
@@ -1189,5 +1274,90 @@ text-shadow: 0 0 20px #F5C875;
         height: 14px;
         left: -28.5px;
         top: 8px;
+    }
+}
+
+
+
+/*Les membres*/
+@media screen and (max-width: 768px) {
+
+    /*Adaptation de la photo principale*/
+    .article1_membres #members {
+        height: 250px;
+    }
+
+    /*Adaptation du logo U2*/
+    .article1_membres .logoU2 {
+        width: 120px;
+    }
+
+    /*Positionnement du logo et du bandeau sur la photo*/
+    .article1_membres div {
+        right: 15px;
+        top: 80px;
+    }
+
+    /*Adaptation du bandeau Les membres*/
+    .article1_membres div h1 {
+        font-size: 14px;
+        padding: 5px 10px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+
+    /*Adaptation du contenu principal*/
+    .article2_membres {
+        padding: 20px 15px;
+    }
+
+    /*Adaptation du paragraphe de présentation*/
+    .article2_membres > p:first-of-type {
+        font-size: 15px;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    /*Réduction de la largeur des barres rouges*/
+    .article2_membres > p:first-of-type::before,
+    .article2_membres > p:first-of-type::after {
+        width: 25px;
+    }
+
+    /*Disposition des cartes sur une seule colonne*/
+    .article2_membres .parent {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    /*Adaptation des cartes*/
+    .article2_membres .parent div {
+        padding: 15px;
+    }
+
+    /*Adaptation des photos des musiciens*/
+    .article2_membres .parent div img {
+        height: 280px;
+    }
+
+    /*Adaptation des titres h2*/
+    .article2_membres h2 {
+        font-size: 20px;
+    }
+
+    /*Adaptation des rôles des musiciens*/
+    .article2_membres .quality {
+        font-size: 16px;
+    }
+
+    /*Adaptation des paragraphes de présentation*/
+    .article2_membres .introduce {
+        font-size: 15px;
+    }
+
+    /*Adaptation des boutons*/
+    .article2_membres .button {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }

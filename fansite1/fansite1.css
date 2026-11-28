@@ -259,6 +259,7 @@ main .article1_home>div:last-of-type p {
 .article1_home .logoU2 {
     height: 130px;
     width: auto;
+    filter: drop-shadow(0 0 8px #241C17)
 }
 
 /*Mise en forme du lien "Découvrez le groupe" sous forme de bouton*/
@@ -374,6 +375,7 @@ main .article1_home>div:last-of-type:hover hr {
 .article1_biographie .logoU2 {
     height: auto;
     width: 300px;
+    filter: drop-shadow(0 0 8px #241C17)
 }
 
 .article1_biographie div {
@@ -575,6 +577,173 @@ main .article1_home>div:last-of-type:hover hr {
 
 
 
+/********************************************
+                LES MEMBRES
+********************************************/
+
+/*Article 1*/
+
+/*Mise en forme du logo U2*/
+.article1_membres .logoU2 {
+    height: auto;
+    width: 300px;
+    filter: drop-shadow(0 0 8px #241C17);
+}
+
+.article1_membres #members {
+    width: 100%;
+    object-fit: cover;
+    height: 480px;
+    display: block;
+    transition: transform 3s ease;
+    object-position: center 5%;
+
+}
+
+.article1_membres div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    top: 215px;
+    background-color: rgba(36, 28, 23, 0.65);
+    box-shadow: 0 0 30px 20px rgba(36, 28, 23, 0.65);
+    padding: 30px;
+}
+
+.article1_membres div h1 {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/*Mise en forme du mot "Les membres" sous le logo U2*/
+.article1_membres div h1 {
+    background-color: #781C23;
+    font-size: 25px;
+    text-align: center;
+    /*Permet de centrer horizontalement le mot dans son bloc*/
+    padding: 10px 20px;
+    transform: rotate(-4deg);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/*Article 2*/
+.article2_membres .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.article2_membres {
+    background-image: url(images/texture\ claire.png);
+    padding: 30px;
+}
+
+.article2_membres>p:first-of-type {
+    margin-top: 0;
+    font-style: italic;
+    font-family: Georgia, serif;
+    color: #352019;
+    font-weight: bold;
+    font-family: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.article2_membres>p:first-of-type::before,
+.article2_membres>p:first-of-type::after {
+    content: "";
+    display: block;
+    background-color: #781C23;
+    width: 100px;
+    height: 3px;
+}
+
+.article2_membres h2 {
+    color: #781C23;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.article2_membres .introduce {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #352019;
+    line-height: 1.4;
+}
+
+.article2_membres .quality {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: #352019;
+}
+
+.article2_membres .button {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #F2E6D0;
+    text-decoration: none;
+    background-color: #781C23;
+    
+    border-radius: 4px;
+    padding: 10px 35px;
+    text-align: center;
+}
+
+.article2_membres .parent div {
+    background-image: linear-gradient(rgba(255, 240, 215, 0.6),
+            rgba(255, 240, 215, 0.6)), url(images/texture\ claire.png);
+    border-radius: 5px;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article2_membres .parent div .button{
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -665,7 +834,7 @@ main .article1_home>div:last-of-type:hover hr {
     }
 
     /*Positionnement du logo et du bandeau sur la photo*/
-    main .article1_biographie > div {
+    main .article1_biographie>div {
         right: 20px;
         top: 180px;
     }
@@ -846,7 +1015,7 @@ main .article1_home>div:last-of-type:hover hr {
     }
 
     /*Positionnement du logo et du bandeau sur la photo*/
-    main .article1_biographie > div:first-of-type {
+    main .article1_biographie>div:first-of-type {
         position: absolute;
         right: 15px;
         top: 80px;

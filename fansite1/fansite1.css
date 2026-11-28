@@ -596,8 +596,6 @@ main .article1_home>div:last-of-type:hover hr {
     height: 480px;
     display: block;
     transition: transform 3s ease;
-    object-position: center 5%;
-
 }
 
 .article1_membres div {
@@ -608,9 +606,8 @@ main .article1_home>div:last-of-type:hover hr {
     justify-content: center;
     right: 30px;
     top: 215px;
-    background-color: rgba(36, 28, 23, 0.65);
-    box-shadow: 0 0 30px 20px rgba(36, 28, 23, 0.65);
-    padding: 30px;
+    
+    
 }
 
 .article1_membres div h1 {
@@ -680,6 +677,7 @@ main .article1_home>div:last-of-type:hover hr {
     font-family: Georgia, serif;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .article2_membres .introduce {
@@ -687,6 +685,7 @@ main .article1_home>div:last-of-type:hover hr {
     font-size: 16px;
     color: #352019;
     line-height: 1.4;
+    margin-top: 0;
 }
 
 .article2_membres .quality {
@@ -695,6 +694,17 @@ main .article1_home>div:last-of-type:hover hr {
     font-style: italic;
     font-weight: bold;
     color: #352019;
+    margin-top: 4px;
+}
+
+.article2_membres .quality::after{
+    content:"";
+    display: block;
+    width: 75px;
+    background-color: #781C23;
+    height: 2.5px;
+    margin-top: 15px;
+    margin-bottom: 0px;
 }
 
 .article2_membres .button {
@@ -723,6 +733,23 @@ main .article1_home>div:last-of-type:hover hr {
 .article2_membres .parent div .button{
     margin-top: auto;
 }
+
+.article2_membres .parent div img{
+    width: 100%;
+    height:     250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.article2_membres .parent .Bono img{
+    filter: grayscale(100%) brightness(85%) contrast(80%);
+    
+}
+
+.article2_membres .parent .TheEdge img{
+object-position: center 100%;
+}
+
 
 
 

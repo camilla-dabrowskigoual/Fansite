@@ -686,14 +686,12 @@ main .article1_home>div:last-of-type:hover hr {
 
 .article2_membres>p:first-of-type:hover #name_members {
 color :#A51F2D; 
-
-
-
-
+text-shadow: 0 0 15px #F5C875;
 }
 
-
-
+.article2_membres>p:first-of-type:hover::before, .article2_membres>p:first-of-type:hover::after {
+width : 0px;
+}
 
 .article2_membres>p:first-of-type::before,
 .article2_membres>p:first-of-type::after {
@@ -702,6 +700,7 @@ color :#A51F2D;
     background-color: #781C23;
     width: 100px;
     height: 3px;
+    transition : width 1s ease;
 }
 
 .article2_membres h2 {
@@ -715,7 +714,7 @@ color :#A51F2D;
 
 .article2_membres h2:hover {
 color : #A51F2D;
-text-shadow: 0 0 15px #F5C875;
+text-shadow: 0 0 20px #F5C875;
 
 }
 
@@ -725,6 +724,8 @@ text-shadow: 0 0 15px #F5C875;
     color: #352019;
     line-height: 1.4;
     margin-top: 0;
+    text-align:left;
+    
 }
 
 .article2_membres .quality {
@@ -761,7 +762,7 @@ text-shadow: 0 0 15px #F5C875;
 
 
 .article2_membres .button:hover{
-    transform: translateY(-4px);
+    transform: translateY(-8px);
     box-shadow: 0 5px 10px rgba(53, 32, 25, 0.6);
     background-color: #A51F2D;
 }
